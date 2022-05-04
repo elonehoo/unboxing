@@ -1,7 +1,15 @@
-import { describe, expect, it } from 'vitest'
+import { test } from 'vitest'
 
-describe('Hi', () => {
-  it('should works', () => {
-    expect(1 + 1).toEqual(2)
-  })
+import {root,ArrayProto,ObjProto} from "@unboxing/core"
+
+test('test root type',()=>{
+  console.log(typeof root)
+})
+
+test('test Array Proto',()=>{
+  console.log(ArrayProto.push)
+})
+
+test('test Object Proto',()=>{
+  console.log(ObjProto)
 })

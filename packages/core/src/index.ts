@@ -1,3 +1,1 @@
-const a:string = 'core'
-
-export default a
+export * from './setup'
