@@ -2,7 +2,7 @@ import { test } from "vitest"
 import { curry } from "@unboxing/function"
 
 test('test curry',()=>{
-    var addFourNumbers = (a, b, c, d) => a + b + c + d;
+    var addFourNumbers = (a:number, b:number, c:number, d:number) => a + b + c + d;
 
      var curriedAddFourNumbers = curry(addFourNumbers);
      var f = curriedAddFourNumbers(1, 2);
