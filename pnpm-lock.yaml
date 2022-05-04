@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@elonehoo/eslint-config': ^2.0.0
       '@unboxing/core': workspace:*
+      '@unboxing/function': workspace:*
       bumpp: ^7.1.1
       eslint: ^8.14.0
       pnpm: ^7.0.0
@@ -17,6 +18,7 @@ importers:
     devDependencies:
       '@elonehoo/eslint-config': 2.0.0_eslint@8.14.0+typescript@4.6.4
       '@unboxing/core': link:packages/core
+      '@unboxing/function': link:packages/function
       bumpp: 7.1.1
       eslint: 8.14.0
       pnpm: 7.0.0
@@ -32,19 +34,39 @@ importers:
       typescript: ^4.6.4
       unbuild: ^0.7.4
       vite: ^2.9.7
-      vitest: ^0.10.2
     devDependencies:
       rimraf: 3.0.2
       typescript: 4.6.4
       unbuild: 0.7.4
       vite: 2.9.7
-      vitest: 0.10.2
+
+  packages/function:
+    specifiers:
+      '@unboxing/core': workspace:*
+      rimraf: ^3.0.2
+      typescript: ^4.6.4
+      unbuild: ^0.7.4
+      vite: ^2.9.7
+    devDependencies:
+      '@unboxing/core': link:../core
+      rimraf: 3.0.2
+      typescript: 4.6.4
+      unbuild: 0.7.4
+      vite: 2.9.7
 
   test/core-test:
     specifiers:
       '@unboxing/core': workspace:*
     devDependencies:
       '@unboxing/core': link:../../packages/core
+
+  test/function-test:
+    specifiers:
+      '@unboxing/core': workspace:*
+      '@unboxing/function': workspace:*
+    devDependencies:
+      '@unboxing/core': link:../../packages/core
+      '@unboxing/function': link:../../packages/function
 
 packages:
 

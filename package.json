@@ -13,10 +13,12 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test:function":"npm -C test/function-test run test"
   },
   "devDependencies": {
     "@unboxing/core": "workspace:*",
+    "@unboxing/function": "workspace:*",
     "@elonehoo/eslint-config": "^2.0.0",
     "bumpp": "^7.1.1",
     "eslint": "^8.14.0",
