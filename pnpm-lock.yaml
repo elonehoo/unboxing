@@ -44,6 +44,18 @@ importers:
       vite: 2.9.7
       vitest: 0.10.2
 
+  test/core-test:
+    specifiers:
+      '@types/node': ^17.0.31
+      '@unboxing/core': workspace:*
+      vite: ^2.9.7
+      vitest: ^0.10.2
+    devDependencies:
+      '@types/node': 17.0.31
+      '@unboxing/core': link:../../packages/core
+      vite: 2.9.7
+      vitest: 0.10.2
+
 packages:
 
   /@ampproject/remapping/2.2.0:
