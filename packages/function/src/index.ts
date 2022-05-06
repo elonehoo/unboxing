@@ -3,6 +3,7 @@ export * from './curryN'
 export * from './curry'
 export * from './allPass'
 export * from './identity'
+export * from './applyOrReturn'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
