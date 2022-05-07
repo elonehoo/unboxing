@@ -4,6 +4,7 @@ export * from './curry'
 export * from './allPass'
 export * from './identity'
 export * from './applyOrReturn'
+export * from './both'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
