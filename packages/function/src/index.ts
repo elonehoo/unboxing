@@ -5,6 +5,7 @@ export * from './allPass'
 export * from './identity'
 export * from './applyOrReturn'
 export * from './both'
+export * from './comparator'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
