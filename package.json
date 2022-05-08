@@ -14,7 +14,8 @@
     "coverage": "vitest run --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test:function":"npm -C test/function-test run test"
+    "test:function":"npm -C test/function-test run test",
+    "test:is":"npm -C test/is-test run test"
   },
   "devDependencies": {
     "@unboxing/core": "workspace:*",
