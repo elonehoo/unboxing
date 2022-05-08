@@ -20,4 +20,5 @@ export * from './memoize/weak'
 export * from './memoize/strictSingle'
 
 import composeP from './composeP'
-export {composeP}
+import {f} from './F'
+export {composeP,f}
