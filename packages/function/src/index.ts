@@ -22,6 +22,7 @@ export * from './tap'
 export * from './throttle'
 export * from './throttleEnd'
 export * from './tryCatch'
+export * from './updatePropertyValue'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
