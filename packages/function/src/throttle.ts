@@ -8,6 +8,7 @@ export interface Throttle {
     (wait: number): <F extends Func>(fn: F) => ThrottleFunc<F>;
 }
 
+// Creates a throttled function that only invokes `fn` at most once per every `wait` milliseconds. `fn` is called in start of `wait` delay
 export const throttle = curryN(
   2,
   <F extends Func>(wait: number, fn: F): ThrottleFunc<F> => {
