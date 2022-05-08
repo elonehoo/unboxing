@@ -12,6 +12,7 @@ export * from './cond'
 export * from './debounce'
 export * from './either'
 export * from './flip'
+export * from './ifElse'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
