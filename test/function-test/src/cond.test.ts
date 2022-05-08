@@ -1,7 +1,7 @@
 import {test} from 'vitest'
 import {cond} from '@unboxing/function'
 
-test('test cond',()=>{
+test.skip('test cond',()=>{
   var fn = cond([
     [isEqual(0),   always('water freezes at 0°C')],
     [isEqual(100), always('water boils at 100°C')],
