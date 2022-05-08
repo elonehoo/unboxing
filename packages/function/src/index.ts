@@ -15,6 +15,7 @@ export * from './flip'
 export * from './ifElse'
 export * from './noop'
 export * from './nothing'
+export * from './once'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
