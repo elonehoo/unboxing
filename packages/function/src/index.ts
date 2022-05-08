@@ -19,6 +19,7 @@ export * from './once'
 export * from './optional'
 export * from './T'
 export * from './tap'
+export * from './throttle'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
