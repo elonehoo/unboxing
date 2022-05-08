@@ -17,6 +17,7 @@ export * from './noop'
 export * from './nothing'
 export * from './once'
 export * from './optional'
+export * from './T'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
