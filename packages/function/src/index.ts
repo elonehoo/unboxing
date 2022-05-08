@@ -9,6 +9,7 @@ export * from './comparator'
 export * from './complement'
 export * from './compose'
 export * from './cond'
+export * from './debounce'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
