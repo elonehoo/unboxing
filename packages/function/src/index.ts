@@ -8,6 +8,7 @@ export * from './both'
 export * from './comparator'
 export * from './complement'
 export * from './compose'
+export * from './cond'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
