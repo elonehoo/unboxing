@@ -1,7 +1,7 @@
 import { test } from "vitest";
 import {updatePropertyValue} from "@unboxing/function"
 
-test('test updatePropertyValue',()=>{
+test.skip('test updatePropertyValue',()=>{
   var fn = () => {}
   var updateName = updatePropertyValue('name', 'newFn')
   console.log(fn.name)
