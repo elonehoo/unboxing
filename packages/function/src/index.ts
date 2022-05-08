@@ -15,3 +15,6 @@ export * from './memoize/deep'
 export * from './memoize/deepSizeLimit'
 export * from './memoize/weak'
 export * from './memoize/strictSingle'
+
+import composeP from './composeP'
+export {composeP}
