@@ -13,6 +13,7 @@ export * from './debounce'
 export * from './either'
 export * from './flip'
 export * from './ifElse'
+export * from './noop'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
