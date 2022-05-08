@@ -11,6 +11,7 @@ export * from './compose'
 export * from './cond'
 export * from './debounce'
 export * from './either'
+export * from './flip'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
