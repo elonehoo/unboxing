@@ -5,6 +5,6 @@ test('test resolve with',()=>{
   resolveWith(toLowerCase, 'OK').then( res => console.info(res) )
 })
 
-function toLowerCase(value:string):string{
-  return 'abc'
+function toLowerCase(info:any):string{
+  return info[0].toLowerCase()
 }

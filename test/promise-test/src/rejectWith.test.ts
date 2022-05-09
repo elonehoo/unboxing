@@ -6,5 +6,5 @@ test('test reject with',()=>{
 })
 
 function toLowerCase(value:string):string{
-  return 'abc'
+  return value[0].toLowerCase()
 }
