@@ -7,6 +7,8 @@ importers:
       '@elonehoo/eslint-config': ^2.0.0
       '@unboxing/core': workspace:*
       '@unboxing/function': workspace:*
+      '@unboxing/is': workspace:*
+      '@unboxing/promise': workspace:*
       bumpp: ^7.1.1
       eslint: ^8.14.0
       pnpm: ^7.0.0
@@ -19,6 +21,8 @@ importers:
       '@elonehoo/eslint-config': 2.0.0_eslint@8.14.0+typescript@4.6.4
       '@unboxing/core': link:packages/core
       '@unboxing/function': link:packages/function
+      '@unboxing/is': link:packages/is
+      '@unboxing/promise': link:packages/promise
       bumpp: 7.1.1
       eslint: 8.14.0
       pnpm: 7.0.0
