@@ -6,5 +6,5 @@ test('test resolve with',()=>{
 })
 
 function toLowerCase(info:any):string{
-  return info[0].toLowerCase()
+  return info.toLowerCase()
 }

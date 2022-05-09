@@ -5,6 +5,6 @@ test('test reject with',()=>{
   rejectWith(toLowerCase, 'ABC').catch( err => console.error(err) )
 })
 
-function toLowerCase(value:string):string{
-  return value[0].toLowerCase()
+function toLowerCase(value:any):string{
+  return value.toLowerCase()
 }
