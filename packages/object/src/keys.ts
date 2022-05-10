@@ -11,4 +11,4 @@ interface Keys {
  * Note that the order of the output array is not guaranteed to be consistent
  * across different JS platforms.
  */
-export const keys = ((obj:any) => (isObject(obj) ? Object.keys(obj) : [])) as Keys
+export const objectKeys = ((obj:any) => (isObject(obj) ? Object.keys(obj) : [])) as Keys

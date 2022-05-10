@@ -1,6 +1,6 @@
 import { test } from "vitest";
-import {keys} from '@unboxing/object'
+import {objectKeys} from '@unboxing/object'
 
 test('test keys',()=>{
-  console.log(keys({a: 1, b: 2, c: 3}))
+  console.log(objectKeys({a: 1, b: 2, c: 3}))
 })
