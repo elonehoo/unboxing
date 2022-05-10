@@ -16,6 +16,7 @@
     "lint:fix": "eslint . --fix",
     "test:function":"npm -C test/function-test run test",
     "test:is":"npm -C test/is-test run test",
+    "test:object":"npm -C test/object-test run test",
     "test:promise":"npm -C test/promise-test run test"
   },
   "devDependencies": {

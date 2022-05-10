@@ -124,6 +124,12 @@ importers:
     devDependencies:
       '@unboxing/is': link:../../packages/is
 
+  test/object-test:
+    specifiers:
+      '@unboxing/object': workspace:*
+    devDependencies:
+      '@unboxing/object': link:../../packages/object
+
   test/promise-test:
     specifiers:
       '@unboxing/promise': workspace:*
