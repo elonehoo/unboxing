@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@unboxing/is": "workspace:*"
+    "@unboxing/is": "workspace:*",
+    "vitest": "^0.10.2"
   }
 }

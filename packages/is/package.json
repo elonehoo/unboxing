@@ -12,12 +12,8 @@
     "prepublishOnly": "pnpm run build",
     "test": "vitest"
   },
-  "devDependencies": {
+  "dependencies": {
     "@unboxing/core": "workspace:*",
-    "@unboxing/function": "workspace:*",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.4",
-    "unbuild": "^0.7.4",
-    "vite": "^2.9.7"
+    "@unboxing/function": "workspace:*"
   }
 }
