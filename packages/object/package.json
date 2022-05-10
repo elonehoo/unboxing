@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@unboxing/core": "workspace:*",
+    "@unboxing/is": "workspace:*",
     "@unboxing/function": "workspace:*"
   }
 }
