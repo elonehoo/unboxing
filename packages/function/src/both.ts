@@ -13,4 +13,4 @@ interface Both {
  * meaning that the second function will not be invoked if the first returns a
  * false-y value.
  */
-export const both = curryN(2, <T>(f: Pred<T>, g: Pred<T>) => (...args) => f(...args) && g(...args)) as Both
+export const both = curryN(2, <T>(f: Pred<T>, g: Pred<T>) => (args:any|any[]) => f(args) && g(args)) as Both

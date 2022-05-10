@@ -14,7 +14,7 @@ interface Debounce {
 export const debounce = curryN(
   2,
   <F extends Func>(wait: number, fn: F): DebounceFunc<F> => {
-      let timeout;
+      let timeout:any;
 
       function f() {
           let args = arguments;

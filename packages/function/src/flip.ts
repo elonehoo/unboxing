@@ -1,7 +1,7 @@
 import { curryN } from "./curryN"
 
 interface Flip {
-  <T, U, R>(fn: (arg0: T, arg1: U, ...args) => R): (arg1: U, arg0: T, ...args) => R;
+  <T, U, R>(fn: (arg0: T, arg1: U, args:any|any[]) => R): (arg1: U, arg0: T, args:any|any[]) => R;
 }
 
 // Returns a new function much like the supplied one, except that the first two arguments' order is reversed.

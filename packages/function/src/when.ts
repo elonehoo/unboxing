@@ -10,7 +10,7 @@ interface When {
   };
 }
 
-export const when = curryN(3, (pred, onTrue, x) => {
+export const when = curryN(3, (pred:any, onTrue:any, x:any) => {
   if (pred(x)) {
       return onTrue(x);
   }

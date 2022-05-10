@@ -6,14 +6,14 @@ interface Once {
 
 export const once = (<F extends Func>(fn: F) => {
   let called = false;
-  let result;
+  let result:any;
 
-  return (...args) => {
+  return (args:any|any[]) => {
       if (called) {
           return result;
       }
 
-      result = fn(...args);
+      result = fn(args);
       called = true;
 
       return result;

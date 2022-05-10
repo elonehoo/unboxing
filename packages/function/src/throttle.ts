@@ -12,8 +12,8 @@ export interface Throttle {
 export const throttle = curryN(
   2,
   <F extends Func>(wait: number, fn: F): ThrottleFunc<F> => {
-      let lastCalled;
-      let timeout;
+      let lastCalled:any;
+      let timeout:any;
 
       return function(...args) {
           const now = Date.now();

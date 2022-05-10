@@ -6,10 +6,10 @@ import { Func } from "@unboxing/core"
 export const throttleEnd = curryN(
   2,
   <F extends Func>(wait: number, fn: F): ThrottleFunc<F> => {
-      let lastCalled;
-      let lastArgs;
-      let lastThis;
-      let timeout;
+      let lastCalled:any;
+      let lastArgs:any;
+      let lastThis:any;
+      let timeout:any;
 
       return function(...args) {
           const now = Date.now();
