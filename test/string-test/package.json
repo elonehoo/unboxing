@@ -1,0 +1,17 @@
+{
+  "name": "@unboxing/promise-test",
+  "type": "module",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test":"vitest"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@unboxing/string": "workspace:*",
+    "vitest": "^0.10.2"
+  }
+}
