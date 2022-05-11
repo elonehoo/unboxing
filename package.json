@@ -7,7 +7,6 @@
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
   "scripts": {
-    "prepare": "pnpm -r run stub",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public",
     "typeCheck": "tsc --noEmit",
     "lint": "eslint .",
@@ -35,7 +34,6 @@
     "bumpp": "^7.1.1",
     "eslint": "^8.15.0",
     "pnpm": "^7.0.1",
-    "rimraf": "^3.0.2",
     "unbuild": "^0.7.4"
   }
 }
