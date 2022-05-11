@@ -49,9 +49,11 @@ importers:
     specifiers:
       '@unboxing/core': workspace:*
       '@unboxing/function': workspace:*
+      '@unboxing/object': workspace:*
     dependencies:
       '@unboxing/core': link:../core
       '@unboxing/function': link:../function
+      '@unboxing/object': link:../object
 
   packages/object:
     specifiers:
