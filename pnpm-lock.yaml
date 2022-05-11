@@ -34,7 +34,10 @@ importers:
       unbuild: 0.7.4
 
   packages/core:
-    specifiers: {}
+    specifiers:
+      '@unboxing/is': workspace:*
+    dependencies:
+      '@unboxing/is': link:../is
 
   packages/function:
     specifiers:

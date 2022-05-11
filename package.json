@@ -13,6 +13,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest",
+    "test:core": "npm -C test/core-test run test",
     "test:function": "npm -C test/function-test run test",
     "test:is": "npm -C test/is-test run test",
     "test:object": "npm -C test/object-test run test",
