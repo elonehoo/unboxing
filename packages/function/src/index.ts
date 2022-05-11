@@ -27,6 +27,7 @@ export * from './when'
 
 export * from './memoize/createCache'
 export * from './memoize/with'
+export * from './memoize/one'
 export * from './memoize/deep'
 export * from './memoize/deepSizeLimit'
 export * from './memoize/weak'
