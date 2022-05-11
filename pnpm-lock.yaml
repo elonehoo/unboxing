@@ -10,10 +10,10 @@ importers:
       '@unboxing/is': workspace:*
       '@unboxing/object': workspace:*
       '@unboxing/promise': workspace:*
+      '@unboxing/string': workspace:*
       bumpp: ^7.1.1
       eslint: ^8.15.0
       pnpm: ^7.0.1
-      rimraf: ^3.0.2
       typescript: ^4.6.4
       unbuild: ^0.7.4
       vite: ^2.9.8
@@ -27,11 +27,17 @@ importers:
       '@unboxing/is': link:packages/is
       '@unboxing/object': link:packages/object
       '@unboxing/promise': link:packages/promise
+      '@unboxing/string': link:packages/string
       bumpp: 7.1.1
       eslint: 8.15.0
       pnpm: 7.0.1
-      rimraf: 3.0.2
       unbuild: 0.7.4
+
+  packages/array:
+    specifiers:
+      '@unboxing/is': workspace:*
+    dependencies:
+      '@unboxing/is': link:../is
 
   packages/core:
     specifiers:
