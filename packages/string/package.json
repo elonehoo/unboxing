@@ -1,0 +1,18 @@
+{
+  "name": "@unboxing/string",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./src/index.ts",
+  "description": "Starter template for TypeScript library",
+  "author": "Elone Hoo <huchengyea@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && unbuild",
+    "stub": "unbuild --stub",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@unboxing/core": "workspace:*",
+    "@unboxing/function": "workspace:*"
+  }
+}
