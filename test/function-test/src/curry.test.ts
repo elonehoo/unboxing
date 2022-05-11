@@ -1,11 +1,11 @@
-import { test } from "vitest"
-import { curry } from "@unboxing/function"
+import { test } from 'vitest'
+import { curry } from '@unboxing/function'
 
-test('test curry',()=>{
-    var addFourNumbers = (a:number, b:number, c:number, d:number) => a + b + c + d;
+test('test curry', () => {
+  const addFourNumbers = (a: number, b: number, c: number, d: number) => a + b + c + d
 
-     var curriedAddFourNumbers = curry(addFourNumbers);
-     var f = curriedAddFourNumbers(1, 2);
-     var g = f(3);
-     console.log(g(4))
+  const curriedAddFourNumbers = curry(addFourNumbers)
+  const f = curriedAddFourNumbers(1, 2)
+  const g = f(3)
+  console.log(g(4))
 })

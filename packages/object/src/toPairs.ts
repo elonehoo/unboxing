@@ -1,8 +1,8 @@
-import { objectKeys } from "./keys";
-import { Prop, KeyValuePairs } from '@unboxing/core'
+import type { KeyValuePairs, Prop } from '@unboxing/core'
+import { objectKeys } from './keys'
 
 interface ToPairs {
-  <K extends Prop, V>(obj: Record<K, V>): KeyValuePairs<K & string, V>;
+  <K extends Prop, V>(obj: Record<K, V>): KeyValuePairs<K & string, V>
 }
 
 /**
@@ -12,13 +12,12 @@ interface ToPairs {
  * across different JS platforms.
  */
 export const toPairs = (<K extends Prop, V>(obj: Record<K, V> = {} as any) => {
-  const keys = objectKeys(obj);
-  const len = keys.length;
-  const result = new Array(len);
+  const keys = objectKeys(obj)
+  const len = keys.length
+  const result = new Array(len)
 
-  for (let i = 0; i < len; i++) {
-      result[i] = [keys[i], obj[keys[i]]];
-  }
+  for (let i = 0; i < len; i++)
+    result[i] = [keys[i], obj[keys[i]]]
 
-  return result;
+  return result
 }) as ToPairs

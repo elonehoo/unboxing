@@ -1,7 +1,7 @@
 import { test } from 'vitest'
-import {typeOf} from '@unboxing/core'
+import { typeOf } from '@unboxing/core'
 
-test('test type of',()=>{
+test('test type of', () => {
   console.log(typeOf({})) // -> 'Object'
   console.log(typeOf(1)) // -> 'Number'
   console.log(typeOf(false)) // -> 'Boolean'

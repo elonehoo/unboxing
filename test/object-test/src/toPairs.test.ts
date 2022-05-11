@@ -1,6 +1,6 @@
-import { test } from "vitest";
-import {toPairs} from '@unboxing/object'
+import { test } from 'vitest'
+import { toPairs } from '@unboxing/object'
 
-test('test to pairs',()=>{
-  console.log(toPairs({a: 1, b: 2, c: 3}))
+test('test to pairs', () => {
+  console.log(toPairs({ a: 1, b: 2, c: 3 }))
 })

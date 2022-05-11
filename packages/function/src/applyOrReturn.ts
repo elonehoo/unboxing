@@ -1,4 +1,4 @@
-import { curryN } from "./curryN"
+import { curryN } from './curryN'
 
 type ApplyFunc<T> = (...args: T[]) => any
 
@@ -11,9 +11,8 @@ interface ApplyOrReturn {
 
 // If `test` is function it calls with applied first argument, otherwise just returns `test`
 export const applyOrReturn = curryN(2, <T>(args: T[], test: ApplyFunc<T>) => {
-  if (typeof test === 'function') {
-      return test(...args)
-  }
+  if (typeof test === 'function')
+    return test(...args)
 
   return test
 }) as ApplyOrReturn

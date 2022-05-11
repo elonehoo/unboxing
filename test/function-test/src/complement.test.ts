@@ -1,8 +1,8 @@
-import { complement } from "@unboxing/function"
-import { test } from "vitest"
+import { complement } from '@unboxing/function'
+import { test } from 'vitest'
 
-test('test complement',()=>{
-  var isNotNil = complement(isNil)
+test('test complement', () => {
+  const isNotNil = complement(isNil)
 
   console.log(isNil(null)) // true
   console.log(isNotNil(null)) // false
@@ -11,7 +11,7 @@ test('test complement',()=>{
   console.log(isNotNil(7)) // true
 })
 
-function isNil(value:any){
+function isNil(value: any) {
   return value === undefined || value === null
 }
 

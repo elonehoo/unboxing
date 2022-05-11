@@ -1,7 +1,6 @@
-export const toString = (val:any) => {
-  if (val == null) {
-      return '';
-  }
+export const toString = (val: any) => {
+  if (val == null)
+    return ''
 
-  return `${val}`;
+  return `${val}`
 }

@@ -1,8 +1,8 @@
-import {isObject} from '@unboxing/is'
+import { isObject } from '@unboxing/is'
 
 interface Keys {
-  <T extends Record<any, any>>(x: T): Array<keyof T & string>;
-  <T>(x: T): string[];
+  <T extends Record<any, any>>(x: T): Array<keyof T & string>
+  <T>(x: T): string[]
 }
 
 /**
@@ -11,4 +11,4 @@ interface Keys {
  * Note that the order of the output array is not guaranteed to be consistent
  * across different JS platforms.
  */
-export const objectKeys = ((obj:any) => (isObject(obj) ? Object.keys(obj) : [])) as Keys
+export const objectKeys = ((obj: any) => (isObject(obj) ? Object.keys(obj) : [])) as Keys

@@ -1,6 +1,6 @@
-import { toUpper } from "@unboxing/string";
-import { test } from "vitest";
+import { toUpper } from '@unboxing/string'
+import { test } from 'vitest'
 
-test('test to upper',()=>{
+test('test to upper', () => {
   console.log(toUpper('abc'))
 })

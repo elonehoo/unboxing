@@ -1,6 +1,6 @@
-import { trim } from "@unboxing/string";
-import { test } from "vitest";
+import { trim } from '@unboxing/string'
+import { test } from 'vitest'
 
-test('test trim',()=>{
+test('test trim', () => {
   console.log(trim('   aaa   '))
 })

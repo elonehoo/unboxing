@@ -1,10 +1,10 @@
-import { curryN } from "@unboxing/function";
-import { has } from "./has";
-import { ObjPredBy, ObjPred, Prop } from '@unboxing/core'
+import { curryN } from '@unboxing/function'
+import type { ObjPred, ObjPredBy, Prop } from '@unboxing/core'
+import { has } from './has'
 
 interface Where {
-  <O>(spec: Partial<Record<keyof O, ObjPredBy<O>>>, obj: O): boolean;
-  (spec: Record<Prop, ObjPred<string, any>>): (obj:any) => boolean;
+  <O>(spec: Partial<Record<keyof O, ObjPredBy<O>>>, obj: O): boolean
+  (spec: Record<Prop, ObjPred<string, any>>): (obj: any) => boolean
 }
 
 /**
@@ -16,11 +16,10 @@ interface Where {
  */
 export const where = curryN(2, <O>(spec: Partial<Record<keyof O, ObjPredBy<O>>> = {}, obj: O = {} as any) => {
   for (const prop in spec) {
-      if (has(prop, spec) && !spec[prop](obj[prop], prop, obj)) {
-          return false;
-      }
+    if (has(prop, spec) && !spec[prop](obj[prop], prop, obj))
+      return false
   }
 
-  return true;
+  return true
 }) as Where
 

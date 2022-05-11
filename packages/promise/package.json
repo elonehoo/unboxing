@@ -1,11 +1,11 @@
 {
   "name": "@unboxing/promise",
-  "version": "0.0.1",
   "type": "module",
-  "main": "./src/index.ts",
+  "version": "0.0.1",
   "description": "Starter template for TypeScript library",
-  "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
+  "author": "Elone Hoo <huchengyea@163.com>",
+  "main": "./src/index.ts",
   "scripts": {
     "build": "rimraf dist && unbuild",
     "stub": "unbuild --stub",

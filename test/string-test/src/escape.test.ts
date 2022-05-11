@@ -1,6 +1,6 @@
-import { escape } from "@unboxing/string";
-import { test } from "vitest";
+import { escape } from '@unboxing/string'
+import { test } from 'vitest'
 
-test('test escape',()=>{
+test('test escape', () => {
   console.log(escape('fred, barney, & pebbles'))
 })

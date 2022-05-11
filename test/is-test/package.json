@@ -1,15 +1,15 @@
 {
   "name": "@unboxing/is-test",
   "type": "module",
-  "private": "true",
   "version": "0.0.0",
+  "private": "true",
   "description": "",
+  "license": "MIT",
+  "author": "",
   "main": "index.js",
   "scripts": {
     "test":"vitest"
   },
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "@unboxing/is": "workspace:*",
     "vitest": "^0.10.2"

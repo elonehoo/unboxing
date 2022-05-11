@@ -5,13 +5,11 @@
  * 'Object'.
  */
 export function typeOf(x: any): string {
-  if (x === null) {
-    return 'Null';
-  }
+  if (x === null)
+    return 'Null'
 
-  if (x === undefined) {
-    return 'Undefined';
-  }
+  if (x === undefined)
+    return 'Undefined'
 
-  return Object.prototype.toString.call(x).slice(8, -1);
+  return Object.prototype.toString.call(x).slice(8, -1)
 }

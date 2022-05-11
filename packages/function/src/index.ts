@@ -1,3 +1,6 @@
+import composeP from './composeP'
+import { f } from './F'
+
 export * from './always'
 export * from './curryN'
 export * from './curry'
@@ -32,7 +35,4 @@ export * from './memoize/deep'
 export * from './memoize/deepSizeLimit'
 export * from './memoize/weak'
 export * from './memoize/strictSingle'
-
-import composeP from './composeP'
-import {f} from './F'
-export {composeP,f}
+export { composeP, f }

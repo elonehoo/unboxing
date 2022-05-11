@@ -1,30 +1,25 @@
-import { isObject } from "./object"
-
+import { isObject } from './object'
 
 const hasOwnProperty = Object.prototype.hasOwnProperty
 
-export const isShallowEqual = (test1:any, test2:any): boolean => {
-  if (test1 === test2) {
-      return true;
-  }
+export const isShallowEqual = (test1: any, test2: any): boolean => {
+  if (test1 === test2)
+    return true
 
-  if (!isObject(test1) || !isObject(test2)) {
-      return false;
-  }
+  if (!isObject(test1) || !isObject(test2))
+    return false
 
-  const keys = Object.keys(test1);
+  const keys = Object.keys(test1)
 
-  if (keys.length !== Object.keys(test2).length) {
-      return false;
-  }
+  if (keys.length !== Object.keys(test2).length)
+    return false
 
   for (let i = 0; i < keys.length; i++) {
-      const key = keys[i];
+    const key = keys[i]
 
-      if (!hasOwnProperty.call(test2, key) || test1[key] !== test2[key]) {
-          return false;
-      }
+    if (!hasOwnProperty.call(test2, key) || test1[key] !== test2[key])
+      return false
   }
 
-  return true;
+  return true
 }

@@ -1,10 +1,10 @@
-import { when } from "@unboxing/function";
-import { test } from "vitest";
+import { when } from '@unboxing/function'
+import { test } from 'vitest'
 
-test('test when',()=>{
-  var truncate = when(
+test('test when', () => {
+  const truncate = when(
     x => x.length > 10,
-    x => x.slice(0, 10) + '...'
+    x => `${x.slice(0, 10)}...`,
   )
 
   console.log(truncate('12345'))

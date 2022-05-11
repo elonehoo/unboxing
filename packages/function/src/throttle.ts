@@ -1,34 +1,35 @@
-import { curryN } from "./curryN"
-import { Func } from "@unboxing/core"
+import type { Func } from '@unboxing/core'
+import { curryN } from './curryN'
 
-export type ThrottleFunc<T extends Func> = (...args: Parameters<T>) => void;
+export type ThrottleFunc<T extends Func> = (...args: Parameters<T>) => void
 
 export interface Throttle {
-    <F extends Func>(wait: number, fn: F): ThrottleFunc<F>;
-    (wait: number): <F extends Func>(fn: F) => ThrottleFunc<F>;
+    <F extends Func>(wait: number, fn: F): ThrottleFunc<F>
+    (wait: number): <F extends Func>(fn: F) => ThrottleFunc<F>
 }
 
 // Creates a throttled function that only invokes `fn` at most once per every `wait` milliseconds. `fn` is called in start of `wait` delay
 export const throttle = curryN(
   2,
   <F extends Func>(wait: number, fn: F): ThrottleFunc<F> => {
-      let lastCalled:any;
-      let timeout:any;
+    let lastCalled: any
+    let timeout: any
 
-      return function(...args) {
-          const now = Date.now();
-          const diff = lastCalled + wait - now;
+    return function (...args) {
+      const now = Date.now()
+      const diff = lastCalled + wait - now
 
-          if (lastCalled && diff > 0) {
-              clearTimeout(timeout);
-              timeout = setTimeout(() => {
-                  lastCalled = now;
-                  fn.apply(this, args);
-              }, diff);
-          } else {
-              lastCalled = now;
-              fn.apply(this, args);
-          }
-      };
-  }
+      if (lastCalled && diff > 0) {
+        clearTimeout(timeout)
+        timeout = setTimeout(() => {
+          lastCalled = now
+          fn.apply(this, args)
+        }, diff)
+      }
+      else {
+        lastCalled = now
+        fn.apply(this, args)
+      }
+    }
+  },
 ) as Throttle

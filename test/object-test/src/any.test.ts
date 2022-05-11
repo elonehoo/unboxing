@@ -1,8 +1,8 @@
-import {test} from 'vitest'
+import { test } from 'vitest'
 import { anyObject } from '@unboxing/object'
 
-test('test any object',()=>{
-  var isBiggerThanZero = (x:number) => x > 0
+test('test any object', () => {
+  const isBiggerThanZero = (x: number) => x > 0
   console.log(anyObject(isBiggerThanZero, {}))
   console.log(anyObject(isBiggerThanZero, { a: 0 }))
   console.log(anyObject(isBiggerThanZero, { a: 0, b: 1, c: 0 }))

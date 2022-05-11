@@ -1,13 +1,13 @@
-import { curryN } from "@unboxing/function"
-import { Prop } from '@unboxing/core'
+import { curryN } from '@unboxing/function'
+import type { Prop } from '@unboxing/core'
 
 interface Assoc {
-  <K extends Prop, V, O>(prop: K, val: V, obj: O): O & { [k in K]: V };
-  <K extends Prop, V>(prop: K, val: V): <O>(obj: O) => O & { [k in K]: V };
+  <K extends Prop, V, O>(prop: K, val: V, obj: O): O & { [k in K]: V }
+  <K extends Prop, V>(prop: K, val: V): <O>(obj: O) => O & { [k in K]: V }
   <K extends Prop>(prop: K): {
-      <V, O>(val: V, obj: O): O & { [k in K]: V };
-      <V>(val: V): <O>(obj: O) => O & { [k in K]: V };
-  };
+      <V, O>(val: V, obj: O): O & { [k in K]: V }
+      <V>(val: V): <O>(obj: O) => O & { [k in K]: V }
+  }
 }
 
 /**

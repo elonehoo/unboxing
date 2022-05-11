@@ -1,7 +1,7 @@
-import { camelCaseName } from "@unboxing/string";
-import { test } from "vitest";
+import { camelCaseName } from '@unboxing/string'
+import { test } from 'vitest'
 
-test('test camel case name',()=>{
+test('test camel case name', () => {
   console.log(camelCaseName('Foo Bar'))
   console.log(camelCaseName('foo-bar'))
   console.log(camelCaseName('foo_bar'))

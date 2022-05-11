@@ -1,10 +1,10 @@
-import { curryN } from "@unboxing/function";
-import {objectKeys} from './keys'
-import { ObjPred } from '@unboxing/core'
+import { curryN } from '@unboxing/function'
+import type { ObjPred } from '@unboxing/core'
+import { objectKeys } from './keys'
 
 interface FilterObj {
-  <O extends Record<any, any>>(fn: ObjPred<keyof O, O[keyof O]>, obj: O): Partial<O>;
-  <K extends string, V>(fn: ObjPred<K, V>): <O extends Record<K, V>>(obj: O) => Partial<O>;
+  <O extends Record<any, any>>(fn: ObjPred<keyof O, O[keyof O]>, obj: O): Partial<O>
+  <K extends string, V>(fn: ObjPred<K, V>): <O extends Record<K, V>>(obj: O) => Partial<O>
 }
 
 /**
@@ -13,16 +13,15 @@ interface FilterObj {
  * given predicate.
  */
 export const filterObject = curryN(2, <O extends Record<any, any>>(fn: ObjPred<keyof O, O[keyof O]>, obj: O = {} as any) => {
-  const keys = objectKeys(obj);
-  const result: Partial<O> = {};
+  const keys = objectKeys(obj)
+  const result: Partial<O> = {}
 
   for (let i = 0; i < keys.length; i++) {
-      const key = keys[i];
+    const key = keys[i]
 
-      if (fn(obj[key], key, obj)) {
-          result[key] = obj[key];
-      }
+    if (fn(obj[key], key, obj))
+      result[key] = obj[key]
   }
 
-  return result;
+  return result
 }) as FilterObj

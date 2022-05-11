@@ -1,32 +1,32 @@
-import { curryN } from "./curryN"
-import { Func } from "@unboxing/core"
+import type { Func } from '@unboxing/core'
+import { curryN } from './curryN'
 
 interface DebounceFunc<T extends () => any> {
-  (...args: Parameters<T>): void;
-  cancel: Function;
+  (...args: Parameters<T>): void
+  cancel: Function
 }
 
 interface Debounce {
-  <F extends Func>(wait: number, fn: F): DebounceFunc<F>;
-  (wait: number): <F extends Func>(fn: F) => DebounceFunc<F>;
+  <F extends Func>(wait: number, fn: F): DebounceFunc<F>
+  (wait: number): <F extends Func>(fn: F) => DebounceFunc<F>
 }
 
 export const debounce = curryN(
   2,
   <F extends Func>(wait: number, fn: F): DebounceFunc<F> => {
-      let timeout:any;
+    let timeout: any
 
-      function f() {
-          let args = arguments;
-          clearTimeout(timeout);
-          timeout = setTimeout(
-              () => fn.apply(this, args), // eslint-disable-line prefer-rest-params
-              wait
-          );
-      }
+    function f() {
+      const args = arguments
+      clearTimeout(timeout)
+      timeout = setTimeout(
+        () => fn.apply(this, args), // eslint-disable-line prefer-rest-params
+        wait,
+      )
+    }
 
-      f.cancel = () => clearTimeout(timeout);
+    f.cancel = () => clearTimeout(timeout)
 
-      return f;
-  }
+    return f
+  },
 ) as Debounce

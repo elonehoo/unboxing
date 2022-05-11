@@ -1,3 +1,3 @@
-export function negate(value:number):number{
+export function negate(value: number): number {
   return -value
 }

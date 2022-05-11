@@ -1,6 +1,6 @@
-import { test } from "vitest"
-import { allPass } from "@unboxing/function"
+import { test } from 'vitest'
+import { allPass } from '@unboxing/function'
 
-test('test all pass',()=>{
+test('test all pass', () => {
 
 })
