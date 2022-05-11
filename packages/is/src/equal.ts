@@ -38,7 +38,7 @@ const isEqualObjects = (test1:any, test2:any) => {
   return true
 }
 
-const equal = (test1:any, test2:any): boolean => {
+const isEqual = (test1:any, test2:any): boolean => {
   if (test1 === test2) {
       return true;
   }
@@ -64,4 +64,4 @@ const equal = (test1:any, test2:any): boolean => {
   return isEqualNativeTypes(test1, test2);
 }
 
-export const isEqual = curry(equal)
+export const equal = curry(isEqual)
