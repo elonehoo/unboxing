@@ -1,0 +1,21 @@
+{
+  "name": "@unboxing/unboxing",
+  "type": "module",
+  "version": "0.0.2-beta.1",
+  "description": "Starter template for TypeScript library",
+  "license": "MIT",
+  "author": "Elone Hoo <huchengyea@163.com>",
+  "main": "./src/index.ts",
+  "scripts": {
+    "stub": "unbuild --stub"
+  },
+  "dependencies": {
+    "@unboxing/array": "workspace:*",
+    "@unboxing/core": "workspace:*",
+    "@unboxing/function": "workspace:*",
+    "@unboxing/is": "workspace:*",
+    "@unboxing/object": "workspace:*",
+    "@unboxing/promise": "workspace:*",
+    "@unboxing/string": "workspace:*"
+  }
+}
