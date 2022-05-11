@@ -78,9 +78,9 @@ interface Compose {
   (...fns: Array<Func>): Func;
 }
 
-export const compose = ((fns:any|any[]) => (args:any|any[]) => {
+export const compose = ((...fns) => (...args) => {
   const n = fns.length - 1;
-  let result = fns[n](args);
+  let result = fns[n](...args);
 
   for (let i = n - 1; i >= 0; i--) {
       result = fns[i](result);

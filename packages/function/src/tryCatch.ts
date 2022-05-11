@@ -7,7 +7,7 @@ interface TryCatch {
 
 // Takes two functions, tryer and catcher.
 export const tryCatch = curryN(2, <T>(tryer: Func<T>, catcher: Func<T>) => {
-  return (args:any|any[]) => {
+  return (...args) => {
       try {
           return tryer.apply(this, args);
       } catch (e) {
