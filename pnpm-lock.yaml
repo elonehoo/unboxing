@@ -123,6 +123,14 @@ importers:
       '@unboxing/promise': link:../../packages/promise
       vitest: 0.10.2
 
+  test/string-test:
+    specifiers:
+      '@unboxing/string': workspace:*
+      vitest: ^0.10.2
+    devDependencies:
+      '@unboxing/string': link:../../packages/string
+      vitest: 0.10.2
+
 packages:
 
   /@ampproject/remapping/2.2.0:
