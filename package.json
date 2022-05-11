@@ -26,12 +26,6 @@
   },
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
-    "@unboxing/core": "workspace:*",
-    "@unboxing/function": "workspace:*",
-    "@unboxing/is": "workspace:*",
-    "@unboxing/object": "workspace:*",
-    "@unboxing/promise": "workspace:*",
-    "@unboxing/string": "workspace:*",
     "bumpp": "^7.1.1",
     "eslint": "^8.15.0",
     "pnpm": "^7.0.1",
