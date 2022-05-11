@@ -91,6 +91,14 @@ importers:
       '@unboxing/function': link:../function
       '@unboxing/is': link:../is
 
+  test/array-test:
+    specifiers:
+      '@unboxing/array': workspace:*
+      vitest: ^0.10.2
+    devDependencies:
+      '@unboxing/array': link:../../packages/array
+      vitest: 0.10.2
+
   test/core-test:
     specifiers:
       '@unboxing/core': workspace:*
