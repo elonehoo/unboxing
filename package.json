@@ -17,6 +17,7 @@
     "test:object": "npm -C test/object-test run test",
     "test:promise": "npm -C test/promise-test run test",
     "test:string": "npm -C test/string-test run test",
+    "test:array": "npm -C test/array-test run test",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
