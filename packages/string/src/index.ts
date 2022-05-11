@@ -3,5 +3,4 @@ export * from './upperFirst'
 export * from './unescape'
 export * from './trimLeft'
 export * from './trim'
-
-
+export * from './toUpper'
