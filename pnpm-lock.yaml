@@ -42,8 +42,10 @@ importers:
   packages/function:
     specifiers:
       '@unboxing/core': workspace:*
+      '@unboxing/is': workspace:*
     dependencies:
       '@unboxing/core': link:../core
+      '@unboxing/is': link:../is
 
   packages/is:
     specifiers:
@@ -66,6 +68,14 @@ importers:
       '@unboxing/is': link:../is
 
   packages/promise:
+    specifiers:
+      '@unboxing/core': workspace:*
+      '@unboxing/function': workspace:*
+    dependencies:
+      '@unboxing/core': link:../core
+      '@unboxing/function': link:../function
+
+  packages/string:
     specifiers:
       '@unboxing/core': workspace:*
       '@unboxing/function': workspace:*
