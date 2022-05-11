@@ -35,9 +35,11 @@ importers:
 
   packages/array:
     specifiers:
-      '@unboxing/is': workspace:*
+      '@unboxing/core': workspace:*
+      '@unboxing/function': workspace:*
     dependencies:
-      '@unboxing/is': link:../is
+      '@unboxing/core': link:../core
+      '@unboxing/function': link:../function
 
   packages/core:
     specifiers:
