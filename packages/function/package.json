@@ -12,6 +12,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@unboxing/core": "workspace:*"
+    "@unboxing/core": "workspace:*",
+    "@unboxing/is": "workspace:*"
   }
 }
