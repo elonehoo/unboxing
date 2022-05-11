@@ -5,12 +5,6 @@ importers:
   .:
     specifiers:
       '@elonehoo/eslint-config': ^2.0.0
-      '@unboxing/core': workspace:*
-      '@unboxing/function': workspace:*
-      '@unboxing/is': workspace:*
-      '@unboxing/object': workspace:*
-      '@unboxing/promise': workspace:*
-      '@unboxing/string': workspace:*
       bumpp: ^7.1.1
       eslint: ^8.15.0
       pnpm: ^7.0.1
@@ -22,12 +16,6 @@ importers:
       vite: 2.9.8
     devDependencies:
       '@elonehoo/eslint-config': 2.0.0_eslint@8.15.0+typescript@4.6.4
-      '@unboxing/core': link:packages/core
-      '@unboxing/function': link:packages/function
-      '@unboxing/is': link:packages/is
-      '@unboxing/object': link:packages/object
-      '@unboxing/promise': link:packages/promise
-      '@unboxing/string': link:packages/string
       bumpp: 7.1.1
       eslint: 8.15.0
       pnpm: 7.0.1
@@ -92,6 +80,24 @@ importers:
       '@unboxing/core': link:../core
       '@unboxing/function': link:../function
       '@unboxing/is': link:../is
+
+  packages/unboxing:
+    specifiers:
+      '@unboxing/array': workspace:*
+      '@unboxing/core': workspace:*
+      '@unboxing/function': workspace:*
+      '@unboxing/is': workspace:*
+      '@unboxing/object': workspace:*
+      '@unboxing/promise': workspace:*
+      '@unboxing/string': workspace:*
+    dependencies:
+      '@unboxing/array': link:../array
+      '@unboxing/core': link:../core
+      '@unboxing/function': link:../function
+      '@unboxing/is': link:../is
+      '@unboxing/object': link:../object
+      '@unboxing/promise': link:../promise
+      '@unboxing/string': link:../string
 
   test/array-test:
     specifiers:
