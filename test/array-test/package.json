@@ -1,0 +1,17 @@
+{
+  "name": "@unboxing/array-test",
+  "type": "module",
+  "version": "0.0.0",
+  "private": "true",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test":"vitest"
+  },
+  "devDependencies": {
+    "@unboxing/array": "workspace:*",
+    "vitest": "^0.10.2"
+  }
+}
