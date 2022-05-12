@@ -1,3 +1,3 @@
-export function alaways<T>(value: T): Function {
+export function always<T>(value: T): Function {
   return () => value
 }
