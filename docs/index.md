@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.svg
-heroText: unboxing
+heroText: Unboxing
 actionText: Get Started →
 actionLink: /guide/
 altActionText: Why unboxing

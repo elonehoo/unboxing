@@ -2,7 +2,7 @@
   <img src="./public/logo.svg" width="100px" height="100px" />
 </div>
 
-<h1 align="center">unboxing</h1>
+<h1 align="center">Unboxing</h1>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@unboxing/unboxing">
