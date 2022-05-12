@@ -113,6 +113,14 @@ importers:
       '@unboxing/promise': link:../promise
       '@unboxing/string': link:../string
 
+  test/all-test:
+    specifiers:
+      '@unboxing/unboxing': workspace:*
+      vitest: ^0.10.2
+    devDependencies:
+      '@unboxing/unboxing': link:../../packages/unboxing
+      vitest: 0.10.2
+
   test/array-test:
     specifiers:
       '@unboxing/array': workspace:*

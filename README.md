@@ -39,3 +39,15 @@ pnpm i @unboxing/unboxing
 - [@unboxing/function](https://www.npmjs.com/package/@unboxing/function) – for functions – composition, currying and so on, also a set of simple functions (noop, T, F)
 - [@unboxing/is](https://www.npmjs.com/package/@unboxing/is) – set of type checking methods
 - [@unboxing/unboxing](https://www.npmjs.com/package/@unboxing/unboxing) – root contains utilities which don't satisfy any of the above categories or are universal
+
+## Usage
+
+```typescript
+import {pathOr,compose,toLower,map} from '@unboxing/unboxing'
+
+const toLowerName = compose(
+  toLower,
+  pathOr(['name'], '')
+)
+const result = map(toLowerName)([{name: 'testA'}, {name: 'testb'}])
+```
