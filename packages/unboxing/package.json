@@ -1,7 +1,7 @@
 {
   "name": "@unboxing/unboxing",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Starter template for TypeScript library",
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
