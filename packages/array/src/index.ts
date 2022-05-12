@@ -1,5 +1,6 @@
 export * from './all'
 export * from './any'
+export * from './concat'
 export * from './each'
 export * from './filter'
 export * from './find'
