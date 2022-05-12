@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "typescript": "^4.6.4",
-    "vite": "^2.9.8"
+    "vite": "^2.9.9"
   },
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
