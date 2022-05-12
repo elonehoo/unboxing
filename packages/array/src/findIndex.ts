@@ -7,7 +7,7 @@ interface FindIndex {
 }
 
 // Returns the index of the first element of the list which matches the predicate, or `-1` if no element matches.
-export const findStringIndex = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
+export const findArrayIndex = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
   for (let i = 0; i < arr.length; i++) {
       if (fn(arr[i], i, arr)) {
           return i;

@@ -7,7 +7,7 @@ interface Any {
 }
 
 // Returns `true` if at least one of elements of the list match the predicate, `false` otherwise.
-export const anyString = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
+export const anyArray = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
   for (let i = 0; i < arr.length; i++) {
       if (fn(arr[i], i, arr)) {
           return true;

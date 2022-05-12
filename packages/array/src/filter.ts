@@ -11,7 +11,7 @@ interface Filter {
  * same type containing the members of the given arr which satisfy the
  * given predicate.
  */
-export const filterString = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
+export const filterArray = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
   const result = [];
 
   for (let i = 0; i < arr.length; i++) {

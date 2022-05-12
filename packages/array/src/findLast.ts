@@ -7,7 +7,7 @@ interface FindLast {
 }
 
 // Returns the last element of the list which matches the predicate, or `undefined` if no element matches.
-export const findStringLast = curryN(2, <T>(fn: ArrPred<T>, list: ArrayLike<T>) => {
+export const findArrayLast = curryN(2, <T>(fn: ArrPred<T>, list: ArrayLike<T>) => {
   for (let i = list.length - 1; i >= 0; i--) {
       if (fn(list[i], i, list)) {
           return list[i];
