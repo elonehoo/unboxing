@@ -8,7 +8,7 @@ interface Repeat {
 /**
  * Returns a fixed list of size `n` containing a specified identical value.
  */
-export const repeat = curryN(2, <T>(n: number = 0, value: T) => {
+export const repeatArray = curryN(2, <T>(n: number = 0, value: T) => {
   const result: T[] = new Array(n);
 
   for (let i = 0; i < n; i++) {
