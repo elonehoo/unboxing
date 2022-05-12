@@ -14,5 +14,33 @@ export default defineConfig({
     docsBranch: 'main',
     editLinks: true,
     editLinkText: 'Suggest changes to this page',
+    nav:[
+      { text: 'Guide', link: '/guide/' },
+      { text: 'API', link: '/api/' },
+      {
+        text: `v${version}`,
+        items: [
+          {
+            text: 'Release Notes ',
+            link: 'https://github.com/elonehoo/unboxing/releases',
+          },
+        ],
+      },
+    ],
+    sidebar:{
+      '/api/': 'auto',
+      '/': [
+        {
+          text: 'Guide',
+          children: [
+            {
+              text: 'Getting Started',
+              link: '/guide/',
+            },
+          ],
+        }
+      ]
+    }
   }
 })
+
