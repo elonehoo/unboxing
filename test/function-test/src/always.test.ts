@@ -1,7 +1,7 @@
 import { test } from 'vitest'
-import { alaways } from '@unboxing/function'
+import { always } from '@unboxing/function'
 
 test.skip('test alaways', () => {
-  const f = alaways('Foo')
+  const f = always('Foo')
   console.log(f()) // -> 'Foo'
 })
