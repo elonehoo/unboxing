@@ -11,6 +11,7 @@
     "typeCheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "docs:dev": "npm -C docs run dev",
     "test:core": "npm -C test/core-test run test",
     "test:function": "npm -C test/function-test run test",
     "test:is": "npm -C test/is-test run test",
