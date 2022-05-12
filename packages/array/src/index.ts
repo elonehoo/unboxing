@@ -1,3 +1,4 @@
+export * from './adjust'
 export * from './all'
 export * from './any'
 export * from './concat'
