@@ -51,3 +51,7 @@ const toLowerName = compose(
 )
 const result = map(toLowerName)([{name: 'testA'}, {name: 'testb'}])
 ```
+
+##License
+
+[MIT](./LICENSE) License © 2022-Present [Elone Hoo](https://github.com/elonehoo)
