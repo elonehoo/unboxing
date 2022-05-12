@@ -26,10 +26,12 @@ importers:
       '@unboxing/core': workspace:*
       '@unboxing/function': workspace:*
       '@unboxing/is': workspace:*
+      '@unboxing/object': workspace:*
     dependencies:
       '@unboxing/core': link:../core
       '@unboxing/function': link:../function
       '@unboxing/is': link:../is
+      '@unboxing/object': link:../object
 
   packages/core:
     specifiers:
