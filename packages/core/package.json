@@ -10,6 +10,7 @@
     "stub": "unbuild --stub"
   },
   "dependencies": {
-    "@unboxing/is": "workspace:*"
+    "@unboxing/is": "workspace:*",
+    "@unboxing/function": "workspace:*"
   }
 }
