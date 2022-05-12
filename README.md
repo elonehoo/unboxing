@@ -9,3 +9,5 @@
     <img src="https://img.shields.io/npm/v/@unboxing/unboxing?color=81A2BE&label=" />
   </a>
 </p>
+
+> Fast, small and purely functional utility library for TypeScript.
