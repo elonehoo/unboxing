@@ -6,6 +6,15 @@
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
   "main": "./src/index.ts",
+  "homepage": "https://github.com/elonehoo/unboxing#readme",
+  "bugs": {
+    "url":"https://github.com/elonehoo/unboxing/issues",
+    "email": "huchengyea@163.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elonehoo/unboxing.git"
+  },
   "scripts": {
     "stub": "unbuild --stub"
   },
