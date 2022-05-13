@@ -26,7 +26,7 @@ Here we can clearly understand the usage of each API.
    | --- | --- | --- | --- |
    | sources | any / any[ ] | | |
 
-   **Return:** *
+   **Return:** `*`
 
    **Example:**
    ```typescript
@@ -80,7 +80,7 @@ Here we can clearly understand the usage of each API.
    | --- | --- | --- | --- |
    | val | any | |  |
 
-   **Resurn:** boolean
+   **Resurn:** `boolean`
 
    **Example:**
    ```typescript
@@ -106,7 +106,7 @@ Here we can clearly understand the usage of each API.
    | --- | --- | --- | --- |
    | value | number | |  |
 
-   **Return:** number
+   **Return:** `number`
 
    **Example:**
 
@@ -132,7 +132,7 @@ Here we can clearly understand the usage of each API.
    | --- | --- | --- | --- |
    | val | any | | any value |
 
-   **Return:** boolean
+   **Return:** `boolean`
 
    **Example:**
 
@@ -160,7 +160,7 @@ Here we can clearly understand the usage of each API.
    | --- | --- | --- | --- |
    | val | any | | any value |
 
-   **Return:** string
+   **Return:** `string`
 
    **Example:**
 
@@ -186,10 +186,73 @@ Here we can clearly understand the usage of each API.
    import { uniqueId } from '@unboxing/unboxing'
    ```
 
-   **Return:** number
+   **Return:** `number`
 
    **Example:**
 
    ```typescript
    uniqueId() // -> '1651658044131'
    ```
+
+## array
+
+  ### adjustArray
+
+   Applies a function to the value at the given index of an array, returning a new copy of the array with the element at the given index replaced with the result of the function application.
+
+   **Import:**
+
+   ```typescript
+   import { adjustArray } from '@unboxing/array'
+   // or
+   import { adjustArray } from '@unboxing/unboxing'
+   ```
+
+   **Params:**
+
+   | name | type | Attribute | description |
+   | --- | --- | --- | --- |
+   | fn | Function | | The function to apply. |
+   | idx | number | | The index. |
+   | list | array | | An array whose value at the supplied index will be replaced. |
+
+   **Return:** `array`, A copy of the supplied array with the element at index `idx` replaced with the value returned by applying `fn` to the existing element.
+
+   **Example:**
+
+   ```typescript
+   adjustArray(add(10), 1, [1, 2, 3]) //=> [1, 12, 3]
+   adjustArray(add(10))(1)([1, 2, 3]) //=> [1, 12, 3]
+   ```
+
+  ### arrayAll
+
+   Returns `true` if all the elements of the array match the predicate, `false` otherwise.
+
+   **Import:**
+
+   ```typescript
+   import { arrayAll } from '@unboxing/array'
+   // or
+   import { arrayAll } from '@unboxing/unboxing'
+   ```
+
+   **Params:**
+
+   | name | type | Attribute | description |
+   | --- | --- | --- | --- |
+   | fn | Function | | The predicate function. |
+   | arr | Array | | The array to consider. |
+
+   **Return:** `boolean`
+
+   **Example:**
+
+   ```typescript
+   var lessThan2 = x => x < 2;
+   var lessThan3 = x => x < 3;
+   arrayAll(lessThan2)([1, 2]); //=> false
+   arrayAll(lessThan3)([1, 2]); //=> true
+   ```
+
+
