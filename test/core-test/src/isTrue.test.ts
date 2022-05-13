@@ -5,4 +5,5 @@ test('test is true', () => {
   console.log(isTrue(true))
   console.log(isTrue('true'))
   console.log(isTrue('false'))
+  console.log(isTrue([true]))
 })
