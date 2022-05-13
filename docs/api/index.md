@@ -254,5 +254,61 @@ Here we can clearly understand the usage of each API.
    arrayAll(lessThan2)([1, 2]); //=> false
    arrayAll(lessThan3)([1, 2]); //=> true
    ```
+  ### anyArray
+   Returns `true` if at least one of elements of the list match the predicate, `false` otherwise.
+
+   **Import:**
+
+   ```typescript
+   import { arrayAll } from '@unboxing/array'
+   // or
+   import { arrayAll } from '@unboxing/unboxing'
+   ```
+
+   **Params:**
+
+   | name | type | Attribute | description |
+   | --- | --- | --- | --- |
+   | fn | Function | | The predicate function. |
+   | arr | Array | | The array to consider. |
+
+   **Return:** `boolean`, `true` if the predicate is satisfied by at least one element, `false` otherwise.
+
+   **Example:**
+
+   ```typescript
+   var lessThan0 = (x:number) => x < 0
+   var lessThan2 = (x:number) => x < 2
+   anyArray(lessThan0)([1, 2]) //=> false
+   anyArray(lessThan2)([1, 2]) //=> true
+   ```
+
+  ### concat
+   Returns the result of concatenating the given arrays or strings.
+
+   **Import:**
+
+   ```typescript
+   import { concat } from '@unboxing/array'
+   // or
+   import { concat } from '@unboxing/unboxing'
+   ```
+
+   **Params:**
+
+   | name | type | Attribute | description |
+   | --- | --- | --- | --- |
+   | a | 	array/string | | The first list |
+   | b | 	array/string | | The second list |
+
+   **Return:** `array`/`string`, A list consisting of the elements of `firstList` followed by the elements of `secondList`.
+
+   **Example:**
+
+   ```typescript
+   concat('ABC', 'DEF'); // 'ABCDEF'
+   concat([4, 5, 6], [1, 2, 3]); //=> [4, 5, 6, 1, 2, 3]
+   concat([], []); //=> []
+   ```
 
 
