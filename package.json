@@ -1,7 +1,7 @@
 {
   "name": "@unboxing/monorepo",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5-beta.1",
   "private": "true",
   "description": "Fast, small and purely functional utility library for TypeScript.",
   "packageManager": "pnpm@7.0.1",
