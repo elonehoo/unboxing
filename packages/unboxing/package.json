@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/elonehoo/unboxing.git"
   },
-  "readme": "../README.md",
+  "readme": "../../README.md",
   "scripts": {
     "stub": "unbuild --stub"
   },
