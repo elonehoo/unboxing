@@ -1,7 +1,7 @@
 {
   "name": "@unboxing/promise",
   "type": "module",
-  "version": "0.0.5-beta.1",
+  "version": "0.0.5",
   "description": "Fast, small and purely functional utility library for TypeScript.",
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
