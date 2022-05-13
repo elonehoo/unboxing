@@ -3,7 +3,8 @@
   "type": "module",
   "version": "0.0.3",
   "private": "true",
-  "description": "Starter template for TypeScript library",
+  "description": "Fast, small and purely functional utility library for TypeScript.",
+  "packageManager": "pnpm@7.0.1",
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
   "scripts": {
