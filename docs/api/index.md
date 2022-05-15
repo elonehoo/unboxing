@@ -339,5 +339,154 @@ Here we can clearly understand the usage of each API.
   difference([7,6,5,4,3], [1,2,3,4]); //=> [7,6,5]
   ```
 
+  ### drop
+
+  Returns all but the first `n` elements of the given list, string.
+
+  **Import:**
+
+  ```typescript
+  import { drop } from '@unboxing/array'
+  // or
+  import { drop } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | n | number | |  |
+  | xs | array\<any> | |  |
+
+  **Return:** `any`, A copy of list without the first `n` elements
+
+  **Example:**
+
+  ```typescript
+  drop(1, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']
+  drop(2, ['foo', 'bar', 'baz']); //=> ['baz']
+  drop(3, ['foo', 'bar', 'baz']); //=> []
+  drop(4, ['foo', 'bar', 'baz']); //=> []
+  ```
+
+  ### dropArrayLast
+
+  Returns a list containing all but the last `n` elements of the given `list`.
+
+  **Import:**
+
+  ```typescript
+  import { dropArrayLast } from '@unboxing/array'
+  // or
+  import { dropArrayLast } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | n | number |  | The number of elements of list to skip.|
+  | xs | array\<any> |  | The list of elements to consider. |
+
+  **Return:** `Array`, A copy of the list with only the first `list.length - n` elements
+
+  **Example:**
+
+  ```typescript
+  dropLast(1, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
+  dropLast(2, ['foo', 'bar', 'baz']); //=> ['foo']
+  dropLast(3, ['foo', 'bar', 'baz']); //=> []
+  dropLast(4, ['foo', 'bar', 'baz']); //=> []
+  dropLast(3, 'ramda');               //=> 'ra'
+  ```
+
+  ### dropArrayWhile
+
+  Iterate over an input `list`, calling a provided function `fn` for each element in the list.
+
+  **Import:**
+
+  ```typescript
+  import { dropArrayWhile } from '@unboxing/array'
+  // or
+  import { dropArrayWhile } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The function to invoke. Receives three argument: `value`, `index`, `arr`.|
+  | xs | array\<any> |  | The list to iterate over. |
+
+  **Example:**
+
+  ```typescript
+  var printXPlusFive = x => console.log(x + 5);
+  each(printXPlusFive, [1, 2, 3]);
+  // logs 6
+  // logs 7
+  // logs 8
+  ```
+
+  ### filterArray
+
+  Takes a predicate and a "arr", and returns a new array of the same type containing the members of the given arr which satisfy the given predicate.
+
+  **Import:**
+
+  ```typescript
+  import { filterArray } from '@unboxing/array'
+  // or
+  import { filterArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | predicate |
+  | xs | array\<any> |  | The list to iterate over. |
+
+  **Return:** `Array`
+
+  **Example:**
+
+  ```typescript
+  var isEven = n => n % 2 === 0;
+  filter(isEven, [1, 2, 3, 4]); //=> [2, 4]
+  ```
+
+  ### findArray
+
+  Returns the first element of the list which matches the predicate, or `undefined` if no element matches.
+
+  **Import:**
+
+  ```typescript
+  import { findArray } from '@unboxing/array'
+  // or
+  import { findArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The predicate function used to determine if the element is the desired one. |
+  | arr | Array\<any> |  | The array to consider. |
+
+  **Return:** `any`, The element found, or `undefined`.
+
+  **Example:**
+
+  ```typescript
+  var xs = [{a: 1}, {a: 2}, {a: 3}];
+  find(x => x.a === 2)(xs); //=> {a: 2}
+  find(x => x.a === 4)(xs); //=> undefined
+  ```
+
+
+
 
 
