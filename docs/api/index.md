@@ -311,4 +311,33 @@ Here we can clearly understand the usage of each API.
    concat([], []); //=> []
    ```
 
+  ### difference
+
+  Returns the array of all elements in the first array not contained in the second array.
+
+  **Import:**
+
+  ```typescript
+  import { difference } from '@unboxing/array'
+   // or
+   import { difference } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | a | array | | The first array. |
+  | b | array | | The second array. |
+
+  **Return:** `Array`, The elements in `a` that are not in `b`.
+
+  **Example:**
+
+  ```typescript
+  difference([1,2,3,4], [7,6,5,4,3]); //=> [1,2]
+  difference([7,6,5,4,3], [1,2,3,4]); //=> [7,6,5]
+  ```
+
+
 
