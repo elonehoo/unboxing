@@ -486,6 +486,25 @@ Here we can clearly understand the usage of each API.
   find(x => x.a === 4)(xs); //=> undefined
   ```
 
+  ### findArrayIndex
+
+  Returns the index of the first element of the list which matches the predicate, or `-1` if no element matches.
+
+  **Import:**
+
+  ```typescript
+  import { findArrayIndex } from '@unboxing/array'
+  // or
+  import { findArrayIndex } from '@unboxing/unboxing'
+  ```
+
+  **Param:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The predicate function used to determine if the element is the desired one. |
+  | arr | Array\<any> |  | The array to consider. |
+
 
 
 
