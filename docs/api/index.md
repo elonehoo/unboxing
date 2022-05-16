@@ -853,7 +853,36 @@ Here we can clearly understand the usage of each API.
   maxBy(o => o.n, objects); // => { 'n': 2 }
   ```
 
+  ### nth
 
+  Returns the nth element of the given array. If n is negative the element at index length + n is returned.
+
+  **Import:**
+
+  ```typescript
+  import { nth } from '@unboxing/array'
+  // or
+  import { nth } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | index | number |  |  |
+  | arr | array\<any> |  |  |
+
+  **Return:** `any`
+
+  **Example:**
+
+  ```typescript
+  var list = ['foo', 'bar', 'baz', 'quux'];
+  nth(1, list); //=> 'bar'
+  nth(2, list); //=> 'baz'
+  nth(-1, list); //=> 'quux'
+  nth(-99, list); //=> undefined
+  ```
 
 
 
