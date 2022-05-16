@@ -506,6 +506,12 @@ Here we can clearly understand the usage of each API.
   | arr | Array\<any> |  | The array to consider. |
 
 
+  **Return:** `number`, The index of the element found, or `-1`.
 
+  **Example:**
 
-
+  ```typescript
+  var xs = [{a: 1}, {a: 2}, {a: 3}];
+  findArrayIndex(x => x.a === 2)(xs); //=> 1
+  findArrayIndex(x => x.a === 4)(xs); //=> -1
+  ```
