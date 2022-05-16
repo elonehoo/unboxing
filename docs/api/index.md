@@ -742,6 +742,33 @@ Here we can clearly understand the usage of each API.
   joinArray('|', [1, 2, 3]);    //=> '1|2|3'
   ```
 
+  ### last
+
+  Returns the last element of the given array.
+
+  **Import:**
+
+  ```typescript
+  import { last } from '@unboxing/array'
+  // or
+  import { last } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<any> |  |  |
+
+  **Return:** `any`
+
+  **Example:**
+
+  ```typescript
+  last(['fi', 'fo', 'fum']); //=> 'fum'
+  last([]); //=> undefined
+  ```
+
 
 
 
