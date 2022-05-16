@@ -1194,5 +1194,33 @@ Here we can clearly understand the usage of each API.
   shuffle([1, 2, 3, 4]); // => [4, 1, 3, 2]
   ```
 
+  ### sliceArray
 
+  Returns the elements of the given list or string (or object with a `slice` method) from `fromIndex` (inclusive) to toIndex (exclusive).
 
+  **Import:**
+
+  ```typescript
+  import { sliceArray } from '@unboxing/array'
+  // or
+  import { sliceArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fromIndex | number |  | The start index (inclusive). |
+  | toIndex | number |  | The end index (exclusive). |
+  | list | array\<any> \| string |  |  |
+
+  **Return:** `array<any>` | `string`
+
+  **Example:**
+
+  ```typescript
+  sliceArray(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
+  sliceArray(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
+  sliceArray(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
+  sliceArray(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
+  ```
