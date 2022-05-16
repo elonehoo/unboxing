@@ -515,3 +515,37 @@ Here we can clearly understand the usage of each API.
   findArrayIndex(x => x.a === 2)(xs); //=> 1
   findArrayIndex(x => x.a === 4)(xs); //=> -1
   ```
+
+  ### findArrayLast
+
+  Returns the last element of the list which matches the predicate, or `undefined` if no element matches.
+
+  **Import:**
+
+  ```typescript
+  import { findArrayLast } from '@unboxing/array'
+  // or
+  import { findArrayLast } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The predicate function used to determine if the element is the desired one. |
+  | list | Array\<any> |  | The array to consider. |
+
+  **Return:** `any`, 	The element found, or `undefined`.
+
+  **Example:**
+
+  ```typescript
+  const xs = [{a: 1, b: 0}, {a:1, b: 1}];
+
+  findArrayLast(propEq('a', 1))(xs); //=> {a: 1, b: 1}
+  findArrayLast(propEq('a', 4))(xs); //=> undefined
+  ```
+
+
+
+
