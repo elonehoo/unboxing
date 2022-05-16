@@ -769,6 +769,34 @@ Here we can clearly understand the usage of each API.
   last([]); //=> undefined
   ```
 
+  ### lengthArray
+
+  Returns the number of elements in the array by returning `arr.length`.
+
+  **Import:**
+
+  ```typescript
+  import { lengthArray } from '@unboxing/array'
+  // or
+  import { lengthArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<any> |  | The array to inspect. |
+
+  **Return:** `number`, The length of the array.
+
+  **Example:**
+
+  ```typescript
+  lengthArray([]); //=> 0
+  lengthArray([1, 2, 3]); //=> 3
+  ```
+
+
 
 
 
