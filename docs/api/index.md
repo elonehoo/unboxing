@@ -912,5 +912,33 @@ Here we can clearly understand the usage of each API.
   // => [ [ 'sss', 'bars' ],  [ 'ttt', 'foo' ] ]
   ```
 
+  ### pluck
+
+  Returns a new list by plucking the same named property off all objects in the list supplied.
+
+  **Import:**
+
+  ```typescript
+  import { pluck } from '@unboxing/array'
+  // or
+  import { pluck } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | key | string |  | The key name to pluck off of each object. |
+  | arr | array\<any> |  | The array to consider. |
+
+  **Return:** `array`, The list of values for the given key.
+
+  **Example:**
+
+  ```typescript
+  pluck('a')([{a: 1}, {a: 2}]); //=> [1, 2]
+  pluck(0)([[1, 2], [3, 4]]);   //=> [1, 3]
+  ```
+
 
 
