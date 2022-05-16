@@ -1224,3 +1224,31 @@ Here we can clearly understand the usage of each API.
   sliceArray(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
   sliceArray(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
   ```
+
+  ### sortArray
+
+  Returns a copy of the array, sorted according to the comparator function, which should accept two values at a time and return a negative number if the first value is smaller, a positive number if it's larger, and zero if they are equal. Please note that this is a copy of the list. It does not modify the original.
+
+  **Import:**
+
+  ```typescript
+  import { sortArray } from '@unboxing/array'
+  // or
+  import { sortArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | comparator | Function |  | A sorting function |
+  | arr | array\<ant> |  | The list to sort |
+
+  **Return:** `array<any>`, a new array with its elements sorted by the comparator function.
+
+  **Example:**
+
+  ```typescript
+  var diff = function(a, b) { return a - b; };
+  sortArray(diff, [4,2,7,5]); //=> [2, 4, 5, 7]
+  ```
