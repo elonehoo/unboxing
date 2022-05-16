@@ -573,5 +573,31 @@ Here we can clearly understand the usage of each API.
   //=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   ```
 
+  ### head
+
+  Returns the first element of the given array.
+
+  **Import:**
+
+  ```typescript
+  import { head } from '@unboxing/array'
+  // or
+  import { head } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<any> |  |  |
+
+  **Return:** `any`
+
+  **Example:**
+
+  ```typescript
+  head(['fi', 'fo', 'fum']); //=> 'fi'
+  head([]); //=> undefined
+  ```
 
 
