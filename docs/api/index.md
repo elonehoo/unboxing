@@ -658,6 +658,34 @@ Here we can clearly understand the usage of each API.
   //=> {abc: {id: 'abc', title: 'B'}, xyz: {id: 'xyz', title: 'A'}}
   ```
 
+  ### indexOf
+
+  Returns the position of the first occurrence of an item in an array, or -1 if the item is not included in the array.
+
+  **Import:**
+
+  ```typescript
+  import { indexOf } from '@unboxing/array'
+  // or
+  import { indexOf } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | target | any |  | The item to find. |
+  | xs | array\<any> / string |  | The array to search in. |
+
+  **Return:** `number`, the index of the target, or -1 if the target is not found.
+
+  **Example:**
+
+  ```typescript
+  indexOf(3, [1,2,3,4]); //=> 2
+  indexOf(10, [1,2,3,4]); //=> -1
+  ```
+
 
 
 
