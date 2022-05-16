@@ -1134,6 +1134,41 @@ Here we can clearly understand the usage of each API.
   repeatedObjs[0] === repeatedObjs[1]; //=> true
   ```
 
+  ### reverseArray
+
+  Returns a new list or string with the elements or characters in reverse order.
+
+  **Import:**
+
+  ```typescript
+  import { reverseArray } from '@unboxing/array'
+  // or
+  import { reverseArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | list | array\<any> \| string |  |  |
+
+  **Return:** `array<any>` | `string`
+
+  **Example:**
+
+  ```typescript
+  reverseArray([1, 2, 3]);  //=> [3, 2, 1]
+  reverseArray([1, 2]);     //=> [2, 1]
+  reverseArray([1]);        //=> [1]
+  reverseArray([]);         //=> []
+
+  reverseArray('abc');      //=> 'cba'
+  reverseArray('ab');       //=> 'ba'
+  reverseArray('a');        //=> 'a'
+  reverseArray('');         //=> ''
+  ```
+
+
 
 
 
