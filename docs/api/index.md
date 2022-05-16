@@ -686,6 +686,36 @@ Here we can clearly understand the usage of each API.
   indexOf(10, [1,2,3,4]); //=> -1
   ```
 
+  ### intersection
+
+  Combines two array into a set (i.e. no duplicates) composed of those elements common to both arrays.
+
+  **Import:**
+
+  ```typescript
+  import { intersection } from '@unboxing/array'
+  // or
+  import { intersection } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | a | array\<any> |  | The first array. |
+  | b | array\<any> |  | The second array. |
+
+  **Return:** `Array`, The array of elements found in both `a` and `b`.
+
+  **Example:**
+
+  ```typescript
+  intersection([1,2,3,4], [7,6,5,4,3]); //=> [4, 3]
+  ```
+
+
+
+
 
 
 
