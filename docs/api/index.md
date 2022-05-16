@@ -1103,4 +1103,37 @@ Here we can clearly understand the usage of each API.
   removeArray(2, 3, [1,2,3,4,5,6,7,8]); //=> [1,2,6,7,8]
   ```
 
+  ### repeatArray
+
+  Returns a fixed list of size `n` containing a specified identical value.
+
+  **Import:**
+
+  ```typescript
+  import { repeatArray } from '@unboxing/array'
+  // or
+  import { repeatArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | n | number |  | The desired size of the output list. |
+  | value | any |  | The value to repeat. |
+
+  **Return:** `array`, A new array containing `n` values.
+
+  **Example:**
+
+  ```typescript
+  repeatArray(5, 'hi'); //=> ['hi', 'hi', 'hi', 'hi', 'hi']
+
+  var obj = {};
+  var repeatedObjs = repeatArray(5, obj); //=> [{}, {}, {}, {}, {}]
+  repeatedObjs[0] === repeatedObjs[1]; //=> true
+  ```
+
+
+
 
