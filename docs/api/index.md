@@ -884,6 +884,33 @@ Here we can clearly understand the usage of each API.
   nth(-99, list); //=> undefined
   ```
 
+  ### partition
+
+  Takes a predicate and a array and returns the pair of arrays of the same type of elements which do and do not satisfy, the predicate, respectively.
+
+  **Import:**
+
+  ```typescript
+  import { partition } from '@unboxing/array'
+  // or
+  import { partition } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | A predicate to determine which side the element belongs to. |
+  | arr | array\<any> |  | the array to partition. |
+
+  **Return:** `array<any>`, An array, containing first the subset of elements that satisfy the predicate, and second the subset of elements that do not satisfy.
+
+  **Example:**
+
+  ```typescript
+  partition(includes('s'), ['sss', 'ttt', 'foo', 'bars']);
+  // => [ [ 'sss', 'bars' ],  [ 'ttt', 'foo' ] ]
+  ```
 
 
 
