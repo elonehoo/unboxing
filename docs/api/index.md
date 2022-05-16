@@ -980,3 +980,33 @@ Here we can clearly understand the usage of each API.
   range(0); // => []
   ```
 
+  ### reduceArray
+
+  Returns a single item by iterating through the list, successively calling the iterator function and passing it an accumulator value and the current value from the array, and then passing the result to the next call.
+
+  **Import:**
+
+  ```typescript
+  import { reduceArray } from '@unboxing/array'
+  // or
+  import { reduceArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The iterator function. Receives two values, the accumulator and the current element from the array. |
+  | acc | any |  | The accumulator value. |
+  | arr | array\<any> |  | The list to iterate over. |
+
+  **Return:** `any`, The final, accumulated value.
+
+  **Example:**
+
+  ```typescript
+  var numbers = [1, 2, 3];
+  var plus = (a, b) => a + b;
+
+  reduceArray(plus, 10, numbers); //=> 16
+  ```
