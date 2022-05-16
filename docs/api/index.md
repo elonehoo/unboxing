@@ -1168,7 +1168,31 @@ Here we can clearly understand the usage of each API.
   reverseArray('');         //=> ''
   ```
 
+  ### shuffle
 
+  Creates an array of shuffled values
+
+  **Import:**
+
+  ```typescript
+  import { reverseArray } from '@unboxing/array'
+  // or
+  import { reverseArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<any> |  | The collection to shuffle. |
+
+  **Return:** `array<any>`, Returns the new shuffled array.
+
+  **Example:**
+
+  ```typescript
+  shuffle([1, 2, 3, 4]); // => [4, 1, 3, 2]
+  ```
 
 
 
