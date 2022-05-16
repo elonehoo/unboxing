@@ -1045,3 +1045,34 @@ Here we can clearly understand the usage of each API.
   ```typescript
   reduceWhile(acc => acc.length < 3, (acc, x) => acc + x, '1', ['2', '3', '4', '5']) // '123'
   ```
+
+  ### reject
+
+  Takes a predicate and a "arr", and returns a new array of the same type containing the members of the given arr which do not satisfy the given predicate.
+
+  **Import:**
+
+  ```typescript
+  import { reject } from '@unboxing/array'
+  // or
+  import { reject } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | predicate |
+  | arr | array\<any> |  | The list to iterate over. |
+
+  **Return:** `array`
+
+  **Example:**
+
+  ```typescript
+  var isEven = n => n % 2 === 0;
+
+  reject(isEven, [1, 2, 3, 4]); //=> [1, 3]
+  ```
+
+
