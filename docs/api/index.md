@@ -944,7 +944,9 @@ Here we can clearly understand the usage of each API.
 
   Creates an array of numbers (positive and/or negative) progressing from start up to, but not including, end. A step of -1 is used if a negative start is specified without an end or step. If end is not specified, it's set to start with start then set to 0.
 
-  **Note:** JavaScript follows the IEEE-754 standard for resolving floating-point values which can produce unexpected results.
+  :::tip note
+  JavaScript follows the IEEE-754 standard for resolving floating-point values which can produce unexpected results.
+  :::
 
   **Import:**
 
@@ -1009,4 +1011,37 @@ Here we can clearly understand the usage of each API.
   var plus = (a, b) => a + b;
 
   reduceArray(plus, 10, numbers); //=> 16
+  ```
+
+  ### reduceWhile
+
+  Returns a single item by iterating through the list, successively calling the iterator function. reduceWhile also takes a predicate that is evaluated before each step. If the predicate returns false, it "short-circuits" the iteration and returns the current value of the accumulator.
+
+  :::tip node
+  if `arr` is undefined or null, `acc` will be returned by reference immediately
+  :::
+
+  **Import:**
+
+  ```typescript
+  import { reduceWhile } from '@unboxing/array'
+  // or
+  import { reduceWhile } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | pred | Function |  | The predicate function. If it returns a truthy value, reduce continues. Receives the accumulator and the current element |
+  | fn | Function |  | The iterator function. Receives four values, the accumulator, the current element from the array, its index, and the original array. |
+  | acc | any |  | The accumulator value. |
+  | arr | array\<any> |  | The list to iterate over. |
+
+  **Return:** `any`, The final, accumulated value.
+
+  **Example:**
+
+  ```typescript
+  reduceWhile(acc => acc.length < 3, (acc, x) => acc + x, '1', ['2', '3', '4', '5']) // '123'
   ```
