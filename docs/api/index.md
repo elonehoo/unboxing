@@ -824,6 +824,34 @@ Here we can clearly understand the usage of each API.
   map(double, [1, 2, 3]); //=> [2, 4, 6]
   ```
 
+  ### maxBy
+
+  Return max value in array, depending on result of calling `fn`
+
+  **Import:**
+
+  ```typescript
+  import { maxBy } from '@unboxing/array'
+  // or
+  import { maxBy } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The function invoked per element. |
+  | arr | array\<any> |  |  |
+
+  **Return:** `any`, Returns the maximum value.
+
+  **Example:**
+
+  ```typescript
+  var objects = [{ 'n': 1 }, { 'n': 2 }];
+
+  maxBy(o => o.n, objects); // => { 'n': 2 }
+  ```
 
 
 
