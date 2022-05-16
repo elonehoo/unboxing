@@ -713,6 +713,34 @@ Here we can clearly understand the usage of each API.
   intersection([1,2,3,4], [7,6,5,4,3]); //=> [4, 3]
   ```
 
+  ### joinArray
+
+  Returns a string made by inserting the separator between each element and concatenating all the elements into a single string.
+
+  **Import:**
+
+  ```typescript
+  import { joinArray } from '@unboxing/array'
+  // or
+  import { joinArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | separator | string |  | The string used to separate the elements. |
+  | arr | array\<any> |  | The elements to join into a string. |
+
+  **Return:** `string`, str The string made by concatenating `arr` with `separator`.
+
+  **Example:**
+
+  ```typescript
+  var spacer = joinArray(' ');
+  spacer(['a', 2, 3.4]);   //=> 'a 2 3.4'
+  joinArray('|', [1, 2, 3]);    //=> '1|2|3'
+  ```
 
 
 
