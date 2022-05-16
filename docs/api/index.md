@@ -600,4 +600,64 @@ Here we can clearly understand the usage of each API.
   head([]); //=> undefined
   ```
 
+  ### includes
+
+  Dispatches call to arr.indexOf, returns true if arr is array and value in the array or if arr is string and value is substring of arr.
+
+  **Import:**
+
+  ```typescript
+  import { includes } from '@unboxing/array'
+  // or
+  import { includes } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | value | any |  | The item to compare against. |
+  | arr | array\<any> / string |  | The array to consider. |
+
+  **Return:** `boolean`, `true` if the item is in the list, `false` otherwise.
+
+  **Example:**
+
+  ```typescript
+  includes(3, [1, 2, 3]); //=> true
+  includes(4, [1, 2, 3]); //=> false
+  includes('test', 'aaatest'); //=> true
+  ```
+
+  ### indexBy
+
+  Given a function that generates a key, turns a list of objects into an object indexing the objects by the given key. Note that if multiple objects generate the same value for the indexing key only the last value will be included in the generated object.
+
+  **Import:**
+
+  ```typescript
+  import { includes } from '@unboxing/array'
+  // or
+  import { includes } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | Function :: a -> String. |
+  | arr | Array\<any>  |  | The array of objects to index. |
+
+  **Return:** `any`, An object indexing each array element by the given property.
+
+  **Example:**
+
+  ```typescript
+  var list = [{id: 'xyz', title: 'A'}, {id: 'abc', title: 'B'}];
+  indexBy(x => x.id, list);
+  //=> {abc: {id: 'abc', title: 'B'}, xyz: {id: 'xyz', title: 'A'}}
+  ```
+
+
+
 
