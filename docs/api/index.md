@@ -1075,4 +1075,32 @@ Here we can clearly understand the usage of each API.
   reject(isEven, [1, 2, 3, 4]); //=> [1, 3]
   ```
 
+  ### removeArray
+
+  Removes the sub-list of list starting at index start and containing count elements. Note that this is not destructive: it returns a copy of the list with the changes. <small>No lists have been harmed in the application of this function.</small>
+
+  **Import:**
+
+  ```typescript
+  import { removeArray } from '@unboxing/array'
+  // or
+  import { removeArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | start | number |  | The position to start removing elements |
+  | count | number |  | The number of elements to remove |
+  | list | array\<any> |  | The list to remove from |
+
+  **Return:** `any`
+
+  **Example:**
+
+  ```typescript
+  removeArray(2, 3, [1,2,3,4,5,6,7,8]); //=> [1,2,6,7,8]
+  ```
+
 
