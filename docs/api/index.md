@@ -546,6 +546,32 @@ Here we can clearly understand the usage of each API.
   findArrayLast(propEq('a', 4))(xs); //=> undefined
   ```
 
+  ### flatten
+
+  Returns a new list by pulling every item out of it (and all its sub-arrays) and putting them in a new array, depth-first.
+
+  **Import:**
+
+  ```typescript
+  import { flatten } from '@unboxing/array'
+  // or
+  import { flatten } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | array | array\<any> |  | The array to consider. |
+
+  **Return:** `Array`, The flattened list.
+
+  **Example:**
+
+  ```typescript
+  flatten([1, 2, [3, 4], 5, [6, [7, 8, [9, [10, 11], 12]]]]);
+  //=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  ```
 
 
 
