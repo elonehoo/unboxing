@@ -796,6 +796,34 @@ Here we can clearly understand the usage of each API.
   lengthArray([1, 2, 3]); //=> 3
   ```
 
+  ### map
+
+  Creates an array of values by running each element in list through fn. The fn is invoked with three arguments: (value, index, arr).
+
+  **Import:**
+
+  ```typescript
+  import { map } from '@unboxing/array'
+  // or
+  import { map } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The function to be called on every element of the input `list`. |
+  | arr | array\<any> |  | The list to be iterated over. |
+
+  **Return:** `array`, The new list.
+
+  **Example:**
+
+  ```typescript
+  var double = x => x * 2;
+  map(double, [1, 2, 3]); //=> [2, 4, 6]
+  ```
+
 
 
 
