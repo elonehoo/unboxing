@@ -1516,4 +1516,30 @@ Here we can clearly understand the usage of each API.
   unique([1,2,1,2,3,4,1,2]) // => [1, 2, 3, 4]
   ```
 
+  ### uniqueBy
+
+  Returns unique items in array. Uniqueness is defined by `fn`.
+
+  **Import:**
+
+  ```typescript
+  import { uniqueBy } from '@unboxing/array'
+  // or
+  import { uniqueBy } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  |  |
+  | arr | array\<any> |  |  |
+
+  **Return:** `array<any>`
+
+  **Example:**
+
+  ```typescript
+  uniqueBy(x => x % 2, [1, 2, 2, 3, 4, 5, 5, 5]) // [1, 2]
+  ```
 
