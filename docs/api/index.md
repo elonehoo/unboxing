@@ -1606,9 +1606,9 @@ Here we can clearly understand the usage of each API.
   **Import:**
 
   ```typescript
-  import { withoutArray } from '@unboxing/array'
+  import { zip } from '@unboxing/array'
   // or
-  import { withoutArray } from '@unboxing/unboxing'
+  import { zip } from '@unboxing/unboxing'
   ```
 
   **Params:**
@@ -1626,6 +1626,36 @@ Here we can clearly understand the usage of each API.
   zip([1, 2, 3], ['a', 'b', 'c']); //=> [[1, 'a'], [2, 'b'], [3, 'c']]
   ```
 
+  ### zipWith
 
+  Creates a new list out of the two supplied by applying the function to each equally-positioned pair in the lists. The returned list is truncated to the length of the shorter of the two input lists.
+
+  **Import:**
+
+  ```typescript
+  import { zipWith } from '@unboxing/array'
+  // or
+  import { zipWith } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The function used to combine the two elements into one value. |
+  | a | array\<any> |  | The first array to consider. |
+  | b | array\<any> |  | The second array to consider. |
+
+  **Return:** `array<any>`, The list made by combining same-indexed elements of `a` and `b` using `fn`.
+
+  **Example:**
+
+  ```typescript
+  var f = (x, y) => {
+    // ...
+  };
+  zipWith(f, [1, 2, 3], ['a', 'b', 'c']);
+  //=> [f(1, 'a'), f(2, 'b'), f(3, 'c')]
+  ```
 
 
