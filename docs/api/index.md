@@ -1490,4 +1490,30 @@ Here we can clearly understand the usage of each API.
   toArray('test') // => ['test']
   ```
 
+  ### unique
+
+  Returns unique items in array
+
+  **Import:**
+
+  ```typescript
+  import { unique } from '@unboxing/array'
+  // or
+  import { unique } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<any> |  |  |
+
+  **Return:** `array<any>`
+
+  **Example:**
+
+  ```typescript
+  unique([1,2,1,2,3,4,1,2]) // => [1, 2, 3, 4]
+  ```
+
 
