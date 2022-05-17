@@ -1402,4 +1402,33 @@ Here we can clearly understand the usage of each API.
   tailArray([]); //=> []
   ```
 
+  ### takeArray
 
+  Returns the first `n` elements of the given array or string
+
+  **Import:**
+
+  ```typescript
+  import { takeArray } from '@unboxing/array'
+  // or
+  import { takeArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<any> \| string |  |  |
+  | n | number |  |  |
+
+  **Return:** `any`
+
+  **Example:**
+
+  ```typescript
+  takeArray(1, ['foo', 'bar', 'baz']); //=> ['foo']
+  takeArray(2, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
+  takeArray(3, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+  takeArray(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+  takeArray(3, 'ramda');               //=> 'ram'
+  ```
