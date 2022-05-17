@@ -1462,4 +1462,32 @@ Here we can clearly understand the usage of each API.
   takeRightWhile(isNotOne, [1, 2, 3, 4]); //=> [2, 3, 4]
   ```
 
+  ### toArray
+
+  Converts val to array. If val is array return it.
+
+  **Import:**
+
+  ```typescript
+  import { toArray } from '@unboxing/array'
+  // or
+  import { toArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | val | any |  |  |
+
+  **Return:** `array<any>`
+
+  **Example:**
+
+  ```typescript
+  toArray([1,2,3]) // => [1,2,3]
+  toArray(5) // => [5]
+  toArray('test') // => ['test']
+  ```
+
 
