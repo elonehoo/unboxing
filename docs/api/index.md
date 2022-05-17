@@ -1348,3 +1348,31 @@ Here we can clearly understand the usage of each API.
     { name: 'Sam', age: 21 }
   ]
   ```
+
+  ### sumArray
+
+  Adds together all the elements of a list.
+
+  **Import:**
+
+  ```typescript
+  import { sumArray } from '@unboxing/array'
+  // or
+  import { sumArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<number> |  | An array of numbers. |
+
+  **Return:** `number`, The sum of all the numbers in the list.
+
+  **Example:**
+
+  ```typescript
+  sumArray([2,4,6,8,100,1]); //=> 121
+  ```
+
+
