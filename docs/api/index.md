@@ -1660,5 +1660,26 @@ Here we can clearly understand the usage of each API.
 
 ## Function
 
+  ### F
+
+  A function that always returns `false`. Any passed in parameters are ignored.
+
+  **Import:**
+
+  ```typescript
+  import { f } from '@unboxing/function'
+  // or
+  import { f } from '@unboxing/unboxing'
+  ```
+
+  **Return:** `boolean`
+
+  **Example:**
+
+  ```typescript
+  f(); //=> false
+  ```
+
+
 
 
