@@ -1432,3 +1432,34 @@ Here we can clearly understand the usage of each API.
   takeArray(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
   takeArray(3, 'ramda');               //=> 'ram'
   ```
+
+  ### takeRightWhile
+
+  Returns a new array|string containing the last `n` elements of a given array|string, passing each value to the supplied predicate function, and terminating when the predicate function returns `false`. Excludes the element that caused the predicate function to fail.
+
+  **Import:**
+
+  ```typescript
+  import { takeRightWhile } from '@unboxing/array'
+  // or
+  import { takeRightWhile } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The function called per iteration. |
+  | arr | array\<ant> \| string |  | The collection to iterate over. |
+
+  **Return:** `array<any>` | string, A new array or string.
+
+  **Example:**
+
+  ```typescript
+  var isNotOne = x => x !== 1;
+
+  takeRightWhile(isNotOne, [1, 2, 3, 4]); //=> [2, 3, 4]
+  ```
+
+
