@@ -1543,3 +1543,34 @@ Here we can clearly understand the usage of each API.
   uniqueBy(x => x % 2, [1, 2, 2, 3, 4, 5, 5, 5]) // [1, 2]
   ```
 
+  ### updateArray
+
+  Returns a new copy of the array with the element at the provided index replaced with the given value.
+
+  **Import:**
+
+  ```typescript
+  import { updateArray } from '@unboxing/array'
+  // or
+  import { updateArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | idx | number |  | index |
+  | x | any |  | The value to exist at the given index of the returned array. |
+  | list | array\<any> |  | The source array to be updated. |
+
+  **Return:** `array<any>`, A copy of `list` with the value at index `idx` replaced with `x`.
+
+  **Example:**
+
+  ```typescript
+  updateArray(1, 11, [0, 1, 2]);     //=> [0, 11, 2]
+  updateArray(1)(11)([0, 1, 2]);     //=> [0, 11, 2]
+  ```
+
+
+
