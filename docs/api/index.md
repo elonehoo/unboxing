@@ -1572,5 +1572,60 @@ Here we can clearly understand the usage of each API.
   updateArray(1)(11)([0, 1, 2]);     //=> [0, 11, 2]
   ```
 
+  ### withoutArray
+
+  Returns a new list without values in the first argument.
+
+  **Import:**
+
+  ```typescript
+  import { withoutArray } from '@unboxing/array'
+  // or
+  import { withoutArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | xs | array\<any> |  | The values to be removed from `list2`. |
+  | list | array\<any> |  | The array to remove values from. |
+
+  **Return:** `array<any>`, The new array without values in `list1`.
+
+  **Example:**
+
+  ```typescript
+  withoutArray([1, 2], [1, 2, 1, 3, 4]); //=> [3, 4]
+  ```
+
+  ### zip
+
+  Creates a new list out of the two supplied by pairing up equally-positioned items from both lists. The returned list is truncated to the length of the shorter of the two input lists.
+
+  **Import:**
+
+  ```typescript
+  import { withoutArray } from '@unboxing/array'
+  // or
+  import { withoutArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | a | array\<any> |  | The first array to consider. |
+  | b | array\<any> |  | The second array to consider. |
+
+  **Return:** `array<any>`, The list made by pairing up same-indexed elements of `a` and `b`.
+
+  **Example:**
+
+  ```typescript
+  zip([1, 2, 3], ['a', 'b', 'c']); //=> [[1, 'a'], [2, 'b'], [3, 'c']]
+  ```
+
+
 
 
