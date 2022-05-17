@@ -1375,4 +1375,31 @@ Here we can clearly understand the usage of each API.
   sumArray([2,4,6,8,100,1]); //=> 121
   ```
 
+  ### tailArray
+
+  Adds together all the elements of a list.
+
+  **Import:**
+
+  ```typescript
+  import { tailArray } from '@unboxing/array'
+  // or
+  import { tailArray } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arr | array\<any> |  |  |
+
+  **Return:** `any`
+
+  **Example:**
+
+  ```typescript
+  tailArray(['fi', 'fo', 'fum']); //=> ['fo', 'fum']
+  tailArray([]); //=> []
+  ```
+
 
