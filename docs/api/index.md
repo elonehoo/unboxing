@@ -1680,6 +1680,22 @@ Here we can clearly understand the usage of each API.
   f(); //=> false
   ```
 
+  ### T
 
+  A function that always returns `true`. Any passed in parameters are ignored.
+
+  ```typescript
+  import { t } from '@unboxing/function'
+  // or
+  import { t } from '@unboxing/unboxing'
+  ```
+
+  **Return:** `boolean`
+
+  **Example:**
+
+  ```typescript
+  t(); //=> true
+  ```
 
 
