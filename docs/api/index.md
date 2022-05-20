@@ -1730,4 +1730,32 @@ Here we can clearly understand the usage of each API.
   isQueenOfSpades({rank: 'Q', suit: '♠︎'}); //=> true
   ```
 
+  ### always
+
+  Returns a function that always returns the given value. Note that for non-primitives the value returned is a reference to the original value.
+
+  **Import:**
+
+  ```typescript
+  import { always } from '@unboxing/function'
+  // or
+  import { always } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | x | any |  | The value to wrap in a function |
+
+  **Return:** `Function`
+
+  **Example:**
+
+  ```typescript
+  var t = always('Tee');
+  t(); //=> 'Tee'
+  ```
+
+
 
