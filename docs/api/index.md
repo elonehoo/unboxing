@@ -1698,4 +1698,36 @@ Here we can clearly understand the usage of each API.
   t(); //=> true
   ```
 
+  ### allPass
+
+  Takes a list of predicates and returns a predicate that returns true for a given list of arguments if every one of the provided predicates is satisfied by those arguments.
+
+  **Import:**
+
+  ```typescript
+  import { allPass } from '@unboxing/function'
+  // or
+  import { allPass } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fns | array\<any> |  | predicates |
+  | args | any \| any[] |  | passed arguments to predicates |
+
+  **Return:** `Function`
+
+  **Example:**
+
+  ```typescript
+  var isQueen = propEq('rank', 'Q');
+  var isSpade = propEq('suit', '♠︎');
+  var isQueenOfSpades = allPass([isQueen, isSpade]);
+
+  isQueenOfSpades({rank: 'Q', suit: '♣︎'}); //=> false
+  isQueenOfSpades({rank: 'Q', suit: '♠︎'}); //=> true
+  ```
+
 
