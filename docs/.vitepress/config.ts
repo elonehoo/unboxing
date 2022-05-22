@@ -23,9 +23,6 @@ export default defineConfig({
       copyright: 'Copyright © 2022-present Elone Hoo'
     },
     nav:nav(),
-    sidebar:{
-      '/api/': []
-    }
   }
 })
 
