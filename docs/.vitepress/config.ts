@@ -8,39 +8,39 @@ export default defineConfig({
     ["link", { rel: "icon", href: "/logo.svg", type: "image/svg+xml" }]
   ],
   themeConfig:{
-    repo:"elonehoo/unboxing",
     logo:"/logo.svg",
-    docsDir: 'docs',
-    docsBranch: 'main',
-    editLinks: true,
-    editLinkText: 'Suggest changes to this page',
-    nav:[
-      { text: 'Guide', link: '/guide/' },
-      { text: 'API', link: '/api/' },
-      {
-        text: `v${version}`,
-        items: [
-          {
-            text: 'Release Notes ',
-            link: 'https://github.com/elonehoo/unboxing/releases',
-          },
-        ],
-      },
+    editLink: {
+      repo: 'elonehoo/unboxing',
+      branch: 'main',
+      dir: 'docs',
+      text: 'Edit this page on GitHub'
+    },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/elonehoo/unboxing' }
     ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022-present Elone Hoo'
+    },
+    nav:nav(),
     sidebar:{
-      '/api/': 'auto',
-      '/': [
-        {
-          text: 'Guide',
-          children: [
-            {
-              text: 'Getting Started',
-              link: '/guide/',
-            },
-          ],
-        }
-      ]
+      '/api/': []
     }
   }
 })
 
+function nav(){
+  return [
+    { text: 'Guide', link: '/guide/' },
+    { text: 'API', link: '/api/' },
+    {
+      text: `v${version}`,
+      items: [
+        {
+          text: 'Release Notes ',
+          link: 'https://github.com/elonehoo/unboxing/releases',
+        },
+      ],
+    },
+  ]
+}

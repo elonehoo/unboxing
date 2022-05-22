@@ -1,8 +1,10 @@
+---
+editLink: true
+---
+
 # API Reference
 
-:::tip Info
-Here we can clearly understand the usage of each API.
-:::
+> Here we can clearly understand the usage of each API.
 
 ## Core
 
