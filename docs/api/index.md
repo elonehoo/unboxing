@@ -1848,7 +1848,33 @@ editLink: true
   var peopleByIncreasingAge = sort(byAge, people);
   ```
 
+  ### complement
 
+  Takes a function `f` and returns a function `g` such that if called with the same arguments when `f` returns a "truthy" value, `g` returns `false` and when `f` returns a "falsy" value `g` returns `true`.
 
+  **Import:**
 
+  ```typescript
+  import { complement } from '@unboxing/function'
+  // or
+  import { complement } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  |  |
+
+  **Return:** `Function`
+
+  **Example:**
+
+  ```typescript
+  var isNotNil = complement(isNil);
+  isNil(null); //=> true
+  isNotNil(null); //=> false
+  isNil(7); //=> false
+  isNotNil(7); //=> true
+  ```
 
