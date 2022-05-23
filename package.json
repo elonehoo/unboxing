@@ -29,8 +29,8 @@
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
     "bumpp": "^7.1.1",
-    "eslint": "^8.15.0",
-    "pnpm": "^7.1.2",
+    "eslint": "^8.16.0",
+    "pnpm": "^7.1.3",
     "unbuild": "^0.7.4"
   }
 }

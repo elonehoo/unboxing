@@ -2,7 +2,7 @@
   "name": "@unboxing/docs",
   "version": "0.0.0",
   "description": "unboxing docs",
-  "private":"true",
+  "private": "true",
   "scripts": {
     "dev": "vitepress dev --port 3333 --open",
     "build": "vitepress build",
@@ -11,7 +11,7 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
   "dependencies": {
-    "vue": "^3.2.33",
-    "vitepress": "^1.0.0-draft.3"
+    "vitepress": "^1.0.0-draft.4",
+    "vue": "^3.2.36"
   }
 }
