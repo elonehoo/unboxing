@@ -2047,5 +2047,30 @@ editLink: true
   g(4); //=> 10
   ```
 
+  ### debounce
+
+  Creates a debounced function that delays invoking `func` until after `wait` milliseconds have elapsed since the last time the debounced function was invoked. Delayed function invocation might be cancelled by calling cancel method.
+
+  **Import:**
+
+  ```typescript
+  import { debounce } from '@unboxing/function'
+  // or
+  import { debounce } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | wait | number |  | The number of milliseconds to delay. |
+  | fn | Function |  | The function to debounce. |
+
+  **Return:** `Function`, Returns the new debounced function.
+
+
+
+
+
 
 
