@@ -2010,6 +2010,42 @@ editLink: true
   g(4); //=> 10
   ```
 
+  ### curryN
+
+  Returns a curried equivalent of the provided function, with the specified arity. If g is curryN(3, f), the following are equivalent:
+
+  - `g(1)(2)(3)`
+  - `g(1)(2, 3)`
+  - `g(1, 2)(3)`
+  - `g(1, 2, 3)`
+
+  **Import:**
+
+  ```typescript
+  import { curryN } from '@unboxing/function'
+  // or
+  import { curryN } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | arity | number |  | The arity for the returned function. |
+  | fn | Function |  | The function to curry. |
+
+  **Return:** `Function`, A new, curried function.
+
+  **Example:**
+
+  ```typescript
+  var sumArgs = (...args) => sum(args);
+
+  var curriedAddFourNumbers = curryN(4, sumArgs);
+  var f = curriedAddFourNumbers(1, 2);
+  var g = f(3);
+  g(4); //=> 10
+  ```
 
 
 
