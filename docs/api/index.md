@@ -1878,3 +1878,35 @@ editLink: true
   isNotNil(7); //=> true
   ```
 
+  ### compose
+
+  Performs right-to-left function composition. The rightmost function may have any arity; the remaining functions must be unary.
+
+  > Note:
+  > The result of compose is not automatically curried.
+
+  **Import:**
+
+  ```typescript
+  import { compose } from '@unboxing/function'
+  // or
+  import { compose } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fns | array\<Function> \| Function |  |  |
+
+  **Return:** `Function`
+
+  **Example:**
+
+  ```typescript
+  var f = compose(x => x + 1, x => -x, Math.pow);
+
+  f(3, 4); // -(3^4) + 1
+  ```
+
+
