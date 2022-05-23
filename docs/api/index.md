@@ -2100,6 +2100,37 @@ editLink: true
   f(3); //=> false
   ```
 
+  ### flip
+
+  Returns a new function much like the supplied one, except that the first two arguments' order is reversed.
+
+  **Import:**
+
+  ```typescript
+  import { flip } from '@unboxing/function'
+  // or
+  import { flip } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | fn | Function |  | The function to invoke with its first two parameters reversed. |
+
+  **Return:** `any`, The result of invoking `fn` with its first two parameters' order reversed.
+
+  **Example:**
+
+  ```typescript
+  const neg = (a, b) => a - b
+
+  flip(neg)(3, 5); //=> 2
+  ```
+
+
+
+
 
 
 
