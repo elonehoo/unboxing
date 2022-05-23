@@ -1909,4 +1909,37 @@ editLink: true
   f(3, 4); // -(3^4) + 1
   ```
 
+  ### composeP
+
+  Performs right-to-left composition of Promise-returning functions. The rightmost function may have any arity; the remaining functions must be unary.
+
+  > Note: ALL of the chained functions must return a Promise.
+
+  > Note: The result of compose is not automatically curried.
+
+  **Import:**
+
+  ```typescript
+  import { composeP } from '@unboxing/function'
+  // or
+  import { composeP } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | chain | array\<Function> \| Function |  |  |
+
+  **Return:** `Function`
+
+  **Example:**
+
+  ```typescript
+  var res = x => Promise.resolve(x);
+  var f = composeP(x => res(-x), (x, y) => res(Math.pow(x, y)));
+  f(3, 4).then(console.log); // -(3^4)
+  ```
+
+
 
