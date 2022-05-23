@@ -1759,5 +1759,31 @@ editLink: true
   t(); //=> 'Tee'
   ```
 
+  ### applyOrReturn
 
+  If `test` is function it calls with applied first argument, otherwise just returns `test`
+
+  **Import:**
+
+  ```typescript
+  import { applyOrReturn } from '@unboxing/function'
+  // or
+  import { applyOrReturn } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | test | any |  | if `test` is function it's called with args |
+  | args | array\<any> |  | Arguments passed to `test` if it's a function |
+
+  **Return:** `any`
+
+  **Example:**
+
+  ```typescript
+  applyOrReturn([1,2,3], (...args) => args) // => [1,2,3]
+  applyOrReturn([1,2,3], 'test') // => 'test'
+  ```
 
