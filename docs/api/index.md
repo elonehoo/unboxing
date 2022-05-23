@@ -1775,8 +1775,8 @@ editLink: true
 
   | name | type | Attribute | description |
   | --- | --- | --- | --- |
-  | test | any |  | if `test` is function it's called with args |
-  | args | array\<any> |  | Arguments passed to `test` if it's a function |
+  | test | any |  | if `test` is function it's called with args. |
+  | args | array\<any> |  | Arguments passed to `test` if it's a function. |
 
   **Return:** `any`
 
@@ -1803,8 +1803,8 @@ editLink: true
 
   | name | type | Attribute | description |
   | --- | --- | --- | --- |
-  | f | Function |  | a predicate |
-  | g | Function |  | another predicate |
+  | f | Function |  | a predicate. |
+  | g | Function |  | another predicate. |
 
   **Return:** `Function`, a function that applies its arguments to f and g and &&s their outputs together.
 
@@ -1817,6 +1817,38 @@ editLink: true
   f(100); //=> true
   f(101); //=> false
   ```
+
+  ### comparator
+
+  Makes a comparator function out of a function that reports whether the first element is less than the second.
+
+  **Import:**
+
+  ```typescript
+  import { comparator } from '@unboxing/function'
+  // or
+  import { comparator } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | pred | Function |  | A predicate function of arity two which will return `true` if the first argument is less than the second, `false` otherwise. |
+
+  **Return:** `Function`, A Function :: a -> b -> Int that returns `-1` if a < b, `1` if b < a, otherwise `0`.
+
+  **Example:**
+
+  ```typescript
+  var byAge = comparator((a, b) => a.age < b.age);
+  var people = [
+    // ...
+  ];
+  var peopleByIncreasingAge = sort(byAge, people);
+  ```
+
+
 
 
 
