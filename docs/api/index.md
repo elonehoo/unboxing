@@ -2128,17 +2128,31 @@ editLink: true
   flip(neg)(3, 5); //=> 2
   ```
 
+  ### identity
 
+  A function that does nothing but return the parameter supplied to it. Good as a default or placeholder function.
 
+  **Import:**
 
+  ```typescript
+  import { identity } from '@unboxing/function'
+  // or
+  import { identity } from '@unboxing/unboxing'
+  ```
 
+  **Params:**
 
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | x | any |  | The value to return. |
 
+  **Return:** `any`, The input value, `x`.
 
+  **Example:**
 
+  ```typescript
+  identity(1); //=> 1
 
-
-
-
-
-
+  const obj = {};
+  identity(obj) === obj; //=> true
+  ```
