@@ -2156,3 +2156,39 @@ editLink: true
   const obj = {};
   identity(obj) === obj; //=> true
   ```
+
+  ### ifelse
+
+  Creates a function that will process either the `onTrue` or the `onFalse` function depending upon the result of the `condition` predicate.
+
+  **Import**
+
+  ```typescript
+  import { ifelse } from '@unboxing/function'
+  // or
+  import { ifelse } from '@unboxing/unboxing'
+  ```
+
+  **Params:**
+
+  | name | type | Attribute | description |
+  | --- | --- | --- | --- |
+  | condition | Function |  | A predicate function |
+  | onTrue | Function |  | A function to invoke when the `condition` evaluates to a truthy value. |
+  | onFalse | Function |  | A function to invoke when the `condition` evaluates to a falsy value. |
+
+  **Return:** `Function`, A new unary function that will process either the `onTrue` or the `onFalse` function depending upon the result of the condition predicate.
+
+  **Example:**
+
+  ```typescript
+  const prop = ifelse(
+    x => x.a,
+    x => x.b,
+    x => x.c
+  );
+  prop({ a: false, c: 2 }); //=> 2
+  prop({ a: true, b: 1, c: 2 }); //=> 1
+  ```
+
+
