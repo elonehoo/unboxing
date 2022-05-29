@@ -2195,4 +2195,14 @@ editLink: true
 
   This method doing nothing and returns `undefined`.
 
+  ### nothing
 
+  A function that always returns undefined. Any passed in parameters are ignored.
+
+  **Return:** `undefined`
+
+  **Example:**
+
+  ```typescript
+  nothing(); //=> undefined
+  ```
