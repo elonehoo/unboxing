@@ -2191,4 +2191,8 @@ editLink: true
   prop({ a: true, b: 1, c: 2 }); //=> 1
   ```
 
+  ### noop
+
+  This method doing nothing and returns `undefined`.
+
 
