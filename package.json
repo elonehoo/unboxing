@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "typescript": "4.8.3",
-    "vite": "2.9.15"
+    "vite": "3.1.0"
   },
   "devDependencies": {
     "@elonehoo/eslint-config": "2.0.0",
