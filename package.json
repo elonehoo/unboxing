@@ -4,7 +4,7 @@
   "version": "0.0.5",
   "private": "true",
   "description": "Fast, small and purely functional utility library for TypeScript.",
-  "packageManager": "pnpm@7.1.2",
+  "packageManager": "pnpm@7.11.0",
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
   "scripts": {
