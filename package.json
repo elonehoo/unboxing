@@ -4,7 +4,7 @@
   "version": "0.0.5",
   "private": "true",
   "description": "Fast, small and purely functional utility library for TypeScript.",
-  "packageManager": "pnpm@7.11.0",
+  "packageManager": "pnpm@7.16.1",
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
   "scripts": {
@@ -30,7 +30,7 @@
     "@elonehoo/eslint-config": "2.0.0",
     "bumpp": "8.2.1",
     "eslint": "8.23.0",
-    "pnpm": "7.11.0",
+    "pnpm": "7.16.1",
     "unbuild": "0.8.10"
   }
 }
