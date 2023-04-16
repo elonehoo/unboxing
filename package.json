@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
-    "bumpp": "8.2.1",
+    "bumpp": "9.1.0",
     "eslint": "8.23.0",
     "pnpm": "7.11.0",
     "unbuild": "0.8.10"
