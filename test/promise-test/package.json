@@ -1,6 +1,5 @@
 {
   "name": "@unboxing/promise-test",
-
   "version": "0.0.0",
   "private": "true",
   "description": "",
@@ -12,6 +11,6 @@
   },
   "devDependencies": {
     "@unboxing/promise": "workspace:*",
-    "vitest": "^0.10.2"
+    "vitest": "^0.30.1"
   }
 }

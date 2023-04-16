@@ -23,14 +23,14 @@
     "test:array": "npm -C test/array-test run test"
   },
   "dependencies": {
-    "typescript": "4.8.3",
-    "vite": "3.1.0"
+    "typescript": "5.0.4",
+    "vite": "4.2.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
-    "bumpp": "8.2.1",
-    "eslint": "8.23.0",
-    "pnpm": "7.11.0",
-    "unbuild": "0.8.10"
+    "bumpp": "9.1.0",
+    "eslint": "8.38.0",
+    "pnpm": "8.2.0",
+    "unbuild": "1.2.1"
   }
 }
