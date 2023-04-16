@@ -1,4 +1,6 @@
 import type { Func } from '@unboxing/core'
 
 // Checks if `test` is function.
-export const isFunction = (test: any): test is Func => typeof test === 'function'
+export function isFunction(test: any): test is Func {
+  return typeof test === 'function'
+}

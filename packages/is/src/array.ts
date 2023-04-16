@@ -1,2 +1,4 @@
 // Checks if `test` is array.
-export const isArray = (test: any): test is any[] => !!test && Array.isArray(test)
+export function isArray(test: any): test is any[] {
+  return !!test && Array.isArray(test)
+}

@@ -1,6 +1,5 @@
-import { adjustArray } from "@unboxing/array";
-import { test } from "vitest";
+import { test } from 'vitest'
 
-test.skip('test adjust array',()=>{
+test.skip('test adjust array', () => {
 
 })

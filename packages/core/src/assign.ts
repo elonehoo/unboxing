@@ -12,7 +12,7 @@ export interface Assign {
  * the own properties of the others objects. If a key exists in several objects,
  * the value from the last object will be used.
  */
-export const assign = ((sources: any|any[]) => {
+export const assign = ((sources: any | any[]) => {
   if (isArray(sources[0]))
     return Object.assign([], sources)
 

@@ -4,24 +4,23 @@
  * `start` is specified without an `end` or `step`. If `end` is not specified,
  * it's set to `start` with `start` then set to `0`.
  */
-export const range = (a: number, b?: number, step?: number) => {
+export function range(a: number, b?: number, step?: number) {
   if (typeof b !== 'number') {
-      b = a;
-      a = 0;
+    b = a
+    a = 0
   }
 
-  if (typeof step !== 'number') {
-      step = a < b ? 1 : -1;
-  }
+  if (typeof step !== 'number')
+    step = a < b ? 1 : -1
 
-  const length = Math.max(Math.ceil((b - a) / (step || 1)), 0);
-  const result = new Array(length);
-  let x = a;
+  const length = Math.max(Math.ceil((b - a) / (step || 1)), 0)
+  const result = new Array(length)
+  let x = a
 
   for (let i = 0; i < length; i++) {
-      result[i] = x;
-      x += step;
+    result[i] = x
+    x += step
   }
 
-  return result;
+  return result
 }

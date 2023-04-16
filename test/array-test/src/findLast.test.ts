@@ -1,5 +1,4 @@
-import { findArrayLast } from "@unboxing/array";
-import { test } from "vitest";
+import { test } from 'vitest'
 
-test.skip('test find string last',()=>{
+test.skip('test find string last', () => {
 })

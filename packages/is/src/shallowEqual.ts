@@ -2,7 +2,7 @@ import { isObject } from './object'
 
 const hasOwnProperty = Object.prototype.hasOwnProperty
 
-export const isShallowEqual = (test1: any, test2: any): boolean => {
+export function isShallowEqual(test1: any, test2: any): boolean {
   if (test1 === test2)
     return true
 

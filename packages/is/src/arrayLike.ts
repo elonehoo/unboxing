@@ -3,7 +3,7 @@ import { isArray } from './array'
 import { isString } from './string'
 
 // Checks if `test` is arrayLike (has `length` and index properties).
-export const isArrayLike = (test: any): test is ArrayLike<any> => {
+export function isArrayLike(test: any): test is ArrayLike<any> {
   switch (true) {
     case isArray(test):
       return true

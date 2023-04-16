@@ -8,7 +8,7 @@ export const once = (<F extends Func>(fn: F) => {
   let called = false
   let result: any
 
-  return (args: any|any[]) => {
+  return (args: any | any[]) => {
     if (called)
       return result
 

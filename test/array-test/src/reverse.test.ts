@@ -1,7 +1,7 @@
-import { reverseArray } from "@unboxing/array";
-import { test } from "vitest";
+import { reverseArray } from '@unboxing/array'
+import { test } from 'vitest'
 
-test('test reverse array',()=>{
+test('test reverse array', () => {
   console.log(reverseArray([1, 2, 3]))
   console.log(reverseArray([1, 2]))
   console.log(reverseArray([]))

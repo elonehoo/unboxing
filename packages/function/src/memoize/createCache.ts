@@ -1,5 +1,5 @@
 // Creates a cache instance base on passed object. Return instance has 3 methods: get, set, has
-export const createCache = (obj = Object.create(null)) => {
+export function createCache(obj = Object.create(null)) {
   return {
     get(key: any) {
       return obj[key]

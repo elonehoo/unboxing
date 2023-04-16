@@ -1,11 +1,11 @@
-import { curryN } from "@unboxing/function";
-import { isString } from "@unboxing/is";
+import { curryN } from '@unboxing/function'
+import { isString } from '@unboxing/is'
 
 interface IndexOf {
-  (target: string, list: string): number;
-  <T>(target: T, list: ArrayLike<T>): number;
-  (targer: string): (list: string) => number;
-  <T>(target: T): (list: ArrayLike<T>) => number;
+  (target: string, list: string): number
+  <T>(target: T, list: ArrayLike<T>): number
+  (targer: string): (list: string) => number
+  <T>(target: T): (list: ArrayLike<T>) => number
 }
 
 /**
@@ -13,9 +13,8 @@ interface IndexOf {
  * if the item is not included in the array.
  */
 export const indexOf = curryN(2, <T>(target: T | string, xs: ArrayLike<T> | string = []) => {
-  if (isString(xs)) {
-      return xs.indexOf(target as string);
-  }
+  if (isString(xs))
+    return xs.indexOf(target as string)
 
-  return Array.prototype.indexOf.call(xs, target);
+  return Array.prototype.indexOf.call(xs, target)
 }) as IndexOf

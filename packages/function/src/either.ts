@@ -13,4 +13,4 @@ interface Either {
  * meaning that the second function will not be invoked if the first returns a
  * truth-y value.
  */
-export const either = curryN(2, <T>(f: Pred<T>, g: Pred<T>) => (args: any|any[]) => f(args) || g(args)) as Either
+export const either = curryN(2, <T>(f: Pred<T>, g: Pred<T>) => (args: any | any[]) => f(args) || g(args)) as Either

@@ -14,4 +14,3 @@ test('test complement', () => {
 function isNil(value: any) {
   return value === undefined || value === null
 }
-

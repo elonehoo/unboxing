@@ -1,4 +1,4 @@
-export const toString = (val: any) => {
+export function toString(val: any) {
   if (val == null)
     return ''
 

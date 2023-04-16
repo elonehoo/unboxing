@@ -1,5 +1,5 @@
 // Returns `true` if its arguments are equivalent is same value zero terms, `false` otherwise.
-export const isStrictEqual = (test1: any, test2: any): boolean => {
+export function isStrictEqual(test1: any, test2: any): boolean {
   // SameValue algorithm
   if (test1 === test2) {
     // Steps 6.b-6.e: +0 != -0

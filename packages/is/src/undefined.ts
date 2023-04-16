@@ -1,2 +1,4 @@
 // Checks if `test` is `undefined`.
-export const isUndefined = (test: any): test is undefined => typeof test === 'undefined'
+export function isUndefined(test: any): test is undefined {
+  return typeof test === 'undefined'
+}

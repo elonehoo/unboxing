@@ -4,7 +4,7 @@ import { isString } from './string'
 import { isObject } from './object'
 
 // Checks if `test` is empty.
-export const isEmpty = (test: any): boolean => {
+export function isEmpty(test: any): boolean {
   switch (true) {
     case isNil(test):
       return true

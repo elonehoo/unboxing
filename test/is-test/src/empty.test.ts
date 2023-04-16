@@ -1,5 +1,6 @@
 import { isEmpty } from '@unboxing/is'
 import { test } from 'vitest'
+
 test('test is empty', () => {
   console.log(isEmpty([]))
   console.log(isEmpty(null))

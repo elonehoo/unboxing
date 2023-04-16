@@ -1,7 +1,7 @@
-import { range } from "@unboxing/array";
-import { test } from "vitest";
+import { range } from '@unboxing/array'
+import { test } from 'vitest'
 
-test('test range',()=>{
+test('test range', () => {
   console.log(range(4))
   console.log(range(-4))
   console.log(range(1, 5))

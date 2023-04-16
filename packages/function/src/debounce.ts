@@ -20,7 +20,7 @@ export const debounce = curryN(
       const args = arguments
       clearTimeout(timeout)
       timeout = setTimeout(
-        () => fn.apply(this, args), // eslint-disable-line prefer-rest-params
+        () => fn.apply(this, args),
         wait,
       )
     }

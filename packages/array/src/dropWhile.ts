@@ -1,10 +1,10 @@
-import { curryN } from "@unboxing/function";
-import { sliceArray } from "./slice";
-import { ArrPred } from '@unboxing/core'
+import { curryN } from '@unboxing/function'
+import type { ArrPred } from '@unboxing/core'
+import { sliceArray } from './slice'
 
 interface DropWhile {
-  <T>(fn: ArrPred<T>, list: ArrayLike<T>): T[];
-  <T>(fn: ArrPred<T>): (list: ArrayLike<T>) => T[];
+  <T>(fn: ArrPred<T>, list: ArrayLike<T>): T[]
+  <T>(fn: ArrPred<T>): (list: ArrayLike<T>) => T[]
 }
 
 /**
@@ -14,11 +14,10 @@ interface DropWhile {
  * `true`.
  */
 export const dropArrayWhile = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
-  let idx = 0;
+  let idx = 0
 
-  while (idx < arr.length && fn(arr[idx], idx, arr)) {
-      idx += 1;
-  }
+  while (idx < arr.length && fn(arr[idx], idx, arr))
+    idx += 1
 
-  return sliceArray(idx, arr.length, arr);
+  return sliceArray(idx, arr.length, arr)
 }) as DropWhile

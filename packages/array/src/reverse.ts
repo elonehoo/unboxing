@@ -1,8 +1,8 @@
-import { isString } from "@unboxing/is";
+import { isString } from '@unboxing/is'
 
 interface Reverse {
-  (list: string): string;
-  <T>(list: ArrayLike<T>): T[];
+  (list: string): string
+  <T>(list: ArrayLike<T>): T[]
 }
 
 /**
@@ -10,9 +10,9 @@ interface Reverse {
  * order.
  */
 export const reverseArray = (<T>(list: ArrayLike<T> | string) =>
-    isString(list)
-        ? list
-              .split('')
-              .reverse()
-              .join('')
-        : Array.prototype.slice.call(list, 0).reverse()) as Reverse
+  isString(list)
+    ? list
+      .split('')
+      .reverse()
+      .join('')
+    : Array.prototype.slice.call(list, 0).reverse()) as Reverse

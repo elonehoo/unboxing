@@ -1,13 +1,13 @@
-import { curryN } from "@unboxing/function";
-import { sliceArray } from "./slice";
+import { curryN } from '@unboxing/function'
+import { sliceArray } from './slice'
 
 interface Drop {
-  (n: number, xs: string): string;
-  <T>(n: number, xs: ArrayLike<T>): T[];
+  (n: number, xs: string): string
+  <T>(n: number, xs: ArrayLike<T>): T[]
   (n: number): {
-      (xs: string): string;
-      <T>(xs: ArrayLike<T>): T[];
-  };
+    (xs: string): string
+      <T>(xs: ArrayLike<T>): T[]
+  }
 }
 
 /**

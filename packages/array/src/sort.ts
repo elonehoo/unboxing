@@ -1,12 +1,14 @@
-import { curryN } from "@unboxing/function";
-import { Ord, CompareFunc } from '@unboxing/core'
+import { curryN } from '@unboxing/function'
+import type { CompareFunc, Ord } from '@unboxing/core'
 
 interface Sort {
-  <T, R extends Ord>(fn: CompareFunc<T, R>, list: ArrayLike<T>): T[];
-  <T, R extends Ord>(fn: CompareFunc<T, R>): (list: ArrayLike<T>) => T[];
+  <T, R extends Ord>(fn: CompareFunc<T, R>, list: ArrayLike<T>): T[]
+  <T, R extends Ord>(fn: CompareFunc<T, R>): (list: ArrayLike<T>) => T[]
 }
 
-const defaultComparator = (a: number, b: number) => a - b;
+function defaultComparator(a: number, b: number) {
+  return a - b
+}
 
 /**
  * Returns a copy of the array, sorted according to the comparator function,
@@ -16,7 +18,7 @@ const defaultComparator = (a: number, b: number) => a - b;
  * modify the original.
  */
 export const sortArray = curryN(2, <T, R>(comparator = defaultComparator, arr: ArrayLike<T> = []) => {
-  const newArray = Array.prototype.slice.call(arr);
+  const newArray = Array.prototype.slice.call(arr)
 
-  return newArray.sort(comparator);
+  return newArray.sort(comparator)
 }) as Sort

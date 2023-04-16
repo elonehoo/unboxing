@@ -1,7 +1,7 @@
 import type { Pred } from '@unboxing/core'
 
 interface Cond {
-  <T, F extends (args: any|any[]) => any>(fns: ArrayLike<[Pred<T>, F]>): (...args: T[]) => ReturnType<F>
+  <T, F extends (args: any | any[]) => any>(fns: ArrayLike<[Pred<T>, F]>): (...args: T[]) => ReturnType<F>
 }
 
 export const cond = (<T, F extends Function>(pairs: [Pred<T>, F][]) =>
@@ -11,4 +11,4 @@ export const cond = (<T, F extends Function>(pairs: [Pred<T>, F][]) =>
         return pairs[i][1].apply(this, args)
     }
   }
-)as Cond
+) as Cond

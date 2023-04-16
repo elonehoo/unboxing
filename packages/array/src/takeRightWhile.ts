@@ -1,14 +1,14 @@
-import { curryN } from "@unboxing/function";
-import { sliceArray } from "./slice";
-import { ArrPred } from '@unboxing/core'
+import { curryN } from '@unboxing/function'
+import type { ArrPred } from '@unboxing/core'
+import { sliceArray } from './slice'
 
 interface TakeRightWhile {
-  (fn: ArrPred<string>, arr: string): string;
-  <T>(fn: ArrPred<T>, arr: ArrayLike<T>): T[];
+  (fn: ArrPred<string>, arr: string): string
+  <T>(fn: ArrPred<T>, arr: ArrayLike<T>): T[]
   <T>(fn: ArrPred<T>): {
-      (arr: string): string;
-      (arr: ArrayLike<T>): T[];
-  };
+    (arr: string): string
+    (arr: ArrayLike<T>): T[]
+  }
 }
 
 /**
@@ -18,11 +18,10 @@ interface TakeRightWhile {
  * predicate function to fail.
  */
 export const takeRightWhile = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
-  let i = arr.length - 1;
+  let i = arr.length - 1
 
-  while (i >= 0 && fn(arr[i], i, arr)) {
-      i -= 1;
-  }
+  while (i >= 0 && fn(arr[i], i, arr))
+    i -= 1
 
-  return sliceArray(i + 1, arr.length, arr);
+  return sliceArray(i + 1, arr.length, arr)
 }) as TakeRightWhile

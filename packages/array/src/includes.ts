@@ -1,10 +1,10 @@
-import { curryN } from "@unboxing/function";
-import { indexOf } from "./indexOf";
+import { curryN } from '@unboxing/function'
+import { indexOf } from './indexOf'
 
 interface Includes {
-  (value: string, array: string): boolean;
-  <T>(value: T, array: ArrayLike<T>): boolean;
-  <T>(value: T): (array: ArrayLike<T> | string) => boolean;
+  (value: string, array: string): boolean
+  <T>(value: T, array: ArrayLike<T>): boolean
+  <T>(value: T): (array: ArrayLike<T> | string) => boolean
 }
 
 /**

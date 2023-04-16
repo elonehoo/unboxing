@@ -22,4 +22,3 @@ export const where = curryN(2, <O>(spec: Partial<Record<keyof O, ObjPredBy<O>>> 
 
   return true
 }) as Where
-

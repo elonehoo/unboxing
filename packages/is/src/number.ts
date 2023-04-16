@@ -1,2 +1,4 @@
 // Checks if `test` is number.
-export const isNum = (test: any): test is number => typeof test === 'number' || test instanceof Number
+export function isNum(test: any): test is number {
+  return typeof test === 'number' || test instanceof Number
+}

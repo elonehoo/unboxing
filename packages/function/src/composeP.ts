@@ -96,19 +96,18 @@ interface ComposeP {
 }
 
 function arity2(b: any, a: any) {
-  return (args: any|any[]) => a(args).then(b)
+  return (args: any | any[]) => a(args).then(b)
 }
 
 function arity3(c: any, b: any, a: any) {
-  return (args: any|any[]) =>
+  return (args: any | any[]) =>
     a(args)
       .then(b)
       .then(c)
 }
 
 function arity4(d: any, c: any, b: any, a: any) {
-  // eslint-disable-line max-params
-  return (args: any|any[]) =>
+  return (args: any | any[]) =>
     a(args)
       .then(b)
       .then(c)
@@ -116,7 +115,7 @@ function arity4(d: any, c: any, b: any, a: any) {
 }
 
 // Performs right-to-left composition of Promise-returning functions.
-function composeP(...chain: ((args: any|any[]) => Promise<any>)[]): any {
+function composeP(...chain: ((args: any | any[]) => Promise<any>)[]): any {
   switch (chain.length) {
     case 0:
       throw new Error('composeP requires at least one argument')

@@ -1,2 +1,4 @@
 // Removes leading and trailing whitespace from `str`.
-export const trim = (str = '') => str.toString().trim() || ''
+export function trim(str = '') {
+  return str.toString().trim() || ''
+}

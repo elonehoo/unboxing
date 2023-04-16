@@ -11,6 +11,6 @@ interface IfElse {
 }
 
 // Creates a function that will process either the `onTrue` or the `onFalse` function depending upon the result of the `condition` predicate.
-export const ifelse = curryN(3, (condition: any, onTrue: any, onFalse: any) => (args: any|any[]) =>
+export const ifelse = curryN(3, (condition: any, onTrue: any, onFalse: any) => (args: any | any[]) =>
   condition(args) ? onTrue(args) : onFalse(args),
 ) as IfElse

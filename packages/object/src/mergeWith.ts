@@ -40,4 +40,3 @@ export const mergeWith = curryN(3, (fn: Func<any, any, any>, ...sources) => {
 
   return result
 }) as MergeWith
-

@@ -1,9 +1,11 @@
 import { curry } from '@unboxing/function'
 import { isArray } from './array'
 
-const isEqualNativeTypes = (test1: any, test2: any) => test1.toString() === test2.toString()
+function isEqualNativeTypes(test1: any, test2: any) {
+  return test1.toString() === test2.toString()
+}
 
-const isEqualArrays = (test1: any, test2: any) => {
+function isEqualArrays(test1: any, test2: any) {
   const len = test1.length
 
   if (len !== test2.length)
@@ -17,7 +19,7 @@ const isEqualArrays = (test1: any, test2: any) => {
   return true
 }
 
-const isEqualObjects = (test1: any, test2: any) => {
+function isEqualObjects(test1: any, test2: any) {
   const keys = Object.keys(test1)
   const len = keys.length
 
@@ -34,7 +36,7 @@ const isEqualObjects = (test1: any, test2: any) => {
   return true
 }
 
-const isEqual = (test1: any, test2: any): boolean => {
+function isEqual(test1: any, test2: any): boolean {
   if (test1 === test2)
     return true
 

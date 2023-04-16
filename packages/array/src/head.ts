@@ -1,6 +1,6 @@
 interface Head {
-  <T>(list: ArrayLike<T>): T | undefined;
-  (list: string): string;
+  <T>(list: ArrayLike<T>): T | undefined
+  (list: string): string
 }
 
 // Returns the first element of the given array.

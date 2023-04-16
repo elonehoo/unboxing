@@ -9,4 +9,3 @@ test('test either', () => {
   console.log(f(8))
   console.log(f(3))
 })
-

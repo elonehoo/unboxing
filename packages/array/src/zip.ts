@@ -1,8 +1,8 @@
-import { curryN } from "@unboxing/function";
+import { curryN } from '@unboxing/function'
 
 interface Zip {
-  <U, V>(list1: ArrayLike<U>, list2: ArrayLike<V>): Array<[U, V]>;
-  <U>(list1: ArrayLike<U>): <V>(list2: ArrayLike<V>) => Array<[U, V]>;
+  <U, V>(list1: ArrayLike<U>, list2: ArrayLike<V>): Array<[U, V]>
+  <U>(list1: ArrayLike<U>): <V>(list2: ArrayLike<V>) => Array<[U, V]>
 }
 
 /**
@@ -11,12 +11,11 @@ interface Zip {
  * shorter of the two input lists.
  */
 export const zip = curryN(2, <U, V>(a: ArrayLike<U> = [], b: ArrayLike<V> = []) => {
-  const len = Math.min(a.length, b.length);
-  const result: Array<[U, V]> = new Array(len);
+  const len = Math.min(a.length, b.length)
+  const result: Array<[U, V]> = new Array(len)
 
-  for (let i = 0; i < len; i++) {
-      result[i] = [a[i], b[i]];
-  }
+  for (let i = 0; i < len; i++)
+    result[i] = [a[i], b[i]]
 
-  return result;
+  return result
 }) as Zip

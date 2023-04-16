@@ -18,4 +18,3 @@ export const updatePropertyValue = curryN(2, <T, R>(propertyName: string, proper
 
   return obj
 }) as UpdatePropertyValue
-

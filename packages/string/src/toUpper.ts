@@ -1,1 +1,3 @@
-export const toUpper = (str = '') => str.toUpperCase()
+export function toUpper(str = '') {
+  return str.toUpperCase()
+}

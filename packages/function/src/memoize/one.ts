@@ -1,6 +1,6 @@
 import { equal } from '@unboxing/is'
 
-export const memoizeOnce = <T extends Function>(fn: T, isEqual: (a, b) => boolean = equal): T => {
+export function memoizeOnce<T extends Function>(fn: T, isEqual: (a, b) => boolean = equal): T {
   let lastArgs = []
   let lastResult
   let alreadyCalled = false

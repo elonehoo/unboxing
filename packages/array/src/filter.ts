@@ -1,9 +1,9 @@
-import { curryN } from "@unboxing/function";
-import { ArrPred } from '@unboxing/core'
+import { curryN } from '@unboxing/function'
+import type { ArrPred } from '@unboxing/core'
 
 interface Filter {
-  <T>(fn: ArrPred<T>, arr: ArrayLike<T>): T[];
-  <T>(fn: ArrPred<T>): (arr: ArrayLike<T>) => T[];
+  <T>(fn: ArrPred<T>, arr: ArrayLike<T>): T[]
+  <T>(fn: ArrPred<T>): (arr: ArrayLike<T>) => T[]
 }
 
 /**
@@ -12,13 +12,12 @@ interface Filter {
  * given predicate.
  */
 export const filterArray = curryN(2, <T>(fn: ArrPred<T>, arr: ArrayLike<T> = []) => {
-  const result = [];
+  const result = []
 
   for (let i = 0; i < arr.length; i++) {
-      if (fn(arr[i], i, arr)) {
-          result.push(arr[i]);
-      }
+    if (fn(arr[i], i, arr))
+      result.push(arr[i])
   }
 
-  return result;
+  return result
 }) as Filter

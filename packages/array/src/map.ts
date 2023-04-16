@@ -1,10 +1,10 @@
-import { curryN } from "@unboxing/function";
+import { curryN } from '@unboxing/function'
 
-type MapFunc<T, R> = (item: T, i: number, arr: ArrayLike<T>) => R;
+type MapFunc<T, R> = (item: T, i: number, arr: ArrayLike<T>) => R
 
 interface Map {
-    <T, R>(fn: MapFunc<T, R>, arr: ArrayLike<T>): R[];
-    <T, R>(fn: MapFunc<T, R>): (arr: ArrayLike<T>) => R[];
+    <T, R>(fn: MapFunc<T, R>, arr: ArrayLike<T>): R[]
+    <T, R>(fn: MapFunc<T, R>): (arr: ArrayLike<T>) => R[]
 }
 
 /**
@@ -12,12 +12,11 @@ interface Map {
  * (value, index, arr).
  */
 export const map = curryN(2, <T, R>(fn: MapFunc<T, R>, arr: ArrayLike<T> = []) => {
-  const len = arr.length;
-  const result = new Array(len);
+  const len = arr.length
+  const result = new Array(len)
 
-  for (let i = 0; i < len; i++) {
-      result[i] = fn(arr[i], i, arr);
-  }
+  for (let i = 0; i < len; i++)
+    result[i] = fn(arr[i], i, arr)
 
-  return result;
+  return result
 }) as Map

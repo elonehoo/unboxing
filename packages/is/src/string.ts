@@ -1,2 +1,4 @@
 // Checks if `test` is string.
-export const isString = (test: any): test is string => typeof test === 'string' || test instanceof String
+export function isString(test: any): test is string {
+  return typeof test === 'string' || test instanceof String
+}

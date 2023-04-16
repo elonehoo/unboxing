@@ -1,2 +1,4 @@
 // Removes leading whitespace from `str`.
-export const trimLift = (str = '') => str.replace(/^[\s\uFEFF\xA0]+/g, '')
+export function trimLift(str = '') {
+  return str.replace(/^[\s\uFEFF\xA0]+/g, '')
+}

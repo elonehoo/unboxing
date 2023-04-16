@@ -8,6 +8,10 @@ const htmlEscapes = {
   '\'': '&#39;',
 }
 
-const escapeBy = (char: any) => htmlEscapes[char]
+function escapeBy(char: any) {
+  return htmlEscapes[char]
+}
 
-export const escape = (str = '') => str.replace(escapeRegExp, escapeBy)
+export function escape(str = '') {
+  return str.replace(escapeRegExp, escapeBy)
+}

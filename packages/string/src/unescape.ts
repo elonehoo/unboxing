@@ -7,6 +7,10 @@ const htmlUnescapes = {
   '&quot;': '"',
   '&#39;': '\'',
 }
-const unescapeBy = (char: any) => htmlUnescapes[char]
+function unescapeBy(char: any) {
+  return htmlUnescapes[char]
+}
 
-export const unescape = (str = '') => str.replace(unescapeRegExp, unescapeBy)
+export function unescape(str = '') {
+  return str.replace(unescapeRegExp, unescapeBy)
+}

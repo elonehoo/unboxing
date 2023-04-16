@@ -1,10 +1,10 @@
-import { curryN } from "@unboxing/function";
+import { curryN } from '@unboxing/function'
 
-type Pred<T> = (v: T, index: number, arr: ArrayLike<T>) => string;
+type Pred<T> = (v: T, index: number, arr: ArrayLike<T>) => string
 
 interface IndexBy {
-    <T>(fn: Pred<T>, list: ArrayLike<T>): Record<string, T>;
-    <T>(fn: Pred<T>): (list: ArrayLike<T>) => Record<string, T>;
+    <T>(fn: Pred<T>, list: ArrayLike<T>): Record<string, T>
+    <T>(fn: Pred<T>): (list: ArrayLike<T>) => Record<string, T>
 }
 
 /**
@@ -14,11 +14,10 @@ interface IndexBy {
  * will be included in the generated object.
  */
 export const indexBy = curryN(2, <T>(fn: Pred<T>, arr: ArrayLike<T> = []) => {
-  const result:any = {};
+  const result: any = {}
 
-  for (let i = 0; i < arr.length; i++) {
-      result[fn(arr[i], i, arr)] = arr[i];
-  }
+  for (let i = 0; i < arr.length; i++)
+    result[fn(arr[i], i, arr)] = arr[i]
 
-  return result;
+  return result
 }) as IndexBy
