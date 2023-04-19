@@ -2,7 +2,7 @@
   "name": "@unboxing/monorepo",
   "version": "0.0.5",
   "private": "true",
-  "packageManager": "pnpm@7.32.1",
+  "packageManager": "pnpm@8.3.0",
   "description": "Fast, small and purely functional utility library for TypeScript.",
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
