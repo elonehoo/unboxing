@@ -1,6 +1,7 @@
 {
   "name": "@unboxing/docs",
   "version": "0.0.0",
+  "type": "module",
   "private": "true",
   "description": "unboxing docs",
   "author": "Elone Hoo <huchengyea@163.com>",
