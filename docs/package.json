@@ -1,6 +1,7 @@
 {
   "name": "@unboxing/docs",
   "version": "0.0.0",
+  "type": "module",
   "private": "true",
   "description": "unboxing docs",
   "author": "Elone Hoo <huchengyea@163.com>",
@@ -11,7 +12,7 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "vitepress": "1.0.0-beta.6",
+    "vitepress": "1.0.0-rc.14",
     "vue": "3.3.4"
   }
 }
