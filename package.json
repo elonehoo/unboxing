@@ -2,7 +2,7 @@
   "name": "@unboxing/monorepo",
   "version": "0.0.5",
   "private": "true",
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@8.8.0",
   "description": "Fast, small and purely functional utility library for TypeScript.",
   "author": "Elone Hoo <huchengyea@163.com>",
   "license": "MIT",
@@ -27,10 +27,10 @@
     "vite": "4.4.9"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.43.0",
+    "@antfu/eslint-config": "^0.43.1",
     "bumpp": "9.2.0",
-    "eslint": "8.49.0",
-    "pnpm": "8.7.6",
+    "eslint": "8.50.0",
+    "pnpm": "8.8.0",
     "unbuild": "2.0.0"
   }
 }
